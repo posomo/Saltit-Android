@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = Configuration.jvmTarget
     }
+    dataBinding {
+        enable = true
+    }
 }
 
 dependencies {

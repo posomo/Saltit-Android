@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Salitit</string>
+    <string name="saltit_menu_home">home</string>
 </resources>

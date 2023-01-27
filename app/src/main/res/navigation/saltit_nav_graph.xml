@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/saltit_nav_graph"
+    app:startDestination="@id/login_nav_graph">
+
+    <include app:graph="@navigation/home_nav_graph"/>
+    <include app:graph="@navigation/login_nav_graph"/>
+
+    <action
+        android:id="@+id/action_login_to_home"
+        app:destination="@id/home_nav_graph" />
+</navigation>

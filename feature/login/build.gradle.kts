@@ -29,14 +29,22 @@ android {
     kotlinOptions {
         jvmTarget = Configuration.jvmTarget
     }
+    dataBinding {
+        enable = true
+    }
 }
 
 dependencies {
+
+    implementation(project(":core:common-ui"))
 
     implementation(Dependencies.androidx.core)
     implementation(Dependencies.androidx.appCompat)
     implementation(Dependencies.androidx.material)
     implementation(Dependencies.androidx.constraint)
+
+    implementation(Dependencies.navigation.ui)
+    implementation(Dependencies.navigation.fragment)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

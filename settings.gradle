@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Salitit"
+include ':app'
+include ':core:domain'
+include ':core:data'
+include ':core:network'
+include ':core:common-ui'
+include ':core:model'
+include ':feature:login'
+include ':feature:home'

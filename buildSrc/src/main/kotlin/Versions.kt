@@ -27,6 +27,9 @@ object Versions {
     // DataStore
     const val datastore = "1.0.0"
 
+    // Naver Map
+    const val map = "3.16.2"
+
     // Test
     const val junit = "4.13.2"
     const val junitExt = "1.1.5"

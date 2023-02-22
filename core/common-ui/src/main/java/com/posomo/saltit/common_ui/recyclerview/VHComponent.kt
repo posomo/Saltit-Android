@@ -9,5 +9,5 @@ sealed interface VHComponent {
 		object REFRESH : VHComponent
 	}
 
-	sealed class DEFAULT : VHComponent
+	object DEFAULT : VHComponent
 }

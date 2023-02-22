@@ -14,11 +14,11 @@ class SaltitPickStoreVH(
         }
 
         binding.text1.setOnClickListener {
-            vhEventListener.onClick(item.viewType, VHComponent.SaltitPickStoreCp.FILTER)
+            vhEventListener.onClick(item.viewType, VHComponent.SaltitPickStoreComponent.FILTER)
         }
 
         binding.text2.setOnClickListener {
-            vhEventListener.onClick(item.viewType, VHComponent.SaltitPickStoreCp.REFRESH)
+            vhEventListener.onClick(item.viewType, VHComponent.SaltitPickStoreComponent.REFRESH)
         }
 
     }

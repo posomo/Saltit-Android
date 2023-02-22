@@ -16,7 +16,7 @@ class SearchHeaderVH(
 
     override fun bind(item: CommonItem) {
         binding.searchHeaderRegionText.setOnClickListener {
-            vhEventListener.onClick(item.viewType, VHComponent.SearchHeaderCp.AREA)
+            vhEventListener.onClick(item.viewType, VHComponent.SearchHeaderComponent.AREA)
         }
     }
 }

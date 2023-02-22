@@ -68,7 +68,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 		when (viewType) {
 			ViewType.SEARCH_HEADER -> {
 				when (component) {
-					VHComponent.SearchHeaderCp.AREA -> {
+					VHComponent.SearchHeaderComponent.AREA -> {
 						Log.d("Check@@@", "여기는 지역 체크")
 					}
 					else -> {}
@@ -76,10 +76,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 			}
 			ViewType.SALTIT_PICK_STORE -> {
 				when (component) {
-					VHComponent.SaltitPickStoreCp.FILTER -> {
+					VHComponent.SaltitPickStoreComponent.FILTER -> {
 						Log.d("Check@@@", "Test1")
 					}
-					VHComponent.SaltitPickStoreCp.REFRESH -> {
+					VHComponent.SaltitPickStoreComponent.REFRESH -> {
 						Log.d("Check@@@", "Test2")
 					}
 					else -> {}

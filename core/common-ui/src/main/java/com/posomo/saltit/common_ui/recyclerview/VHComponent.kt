@@ -1,10 +1,10 @@
 package com.posomo.saltit.common_ui.recyclerview
 
 sealed interface VHComponent {
-	sealed class SearchHeaderCp : VHComponent {
+	sealed class SearchHeaderComponent : VHComponent {
 		object AREA : VHComponent
 	}
-	sealed class SaltitPickStoreCp : VHComponent {
+	sealed class SaltitPickStoreComponent : VHComponent {
 		object FILTER : VHComponent
 		object REFRESH : VHComponent
 	}

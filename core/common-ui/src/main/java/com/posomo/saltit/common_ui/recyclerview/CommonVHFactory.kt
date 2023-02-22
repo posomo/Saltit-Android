@@ -11,7 +11,7 @@ object CommonVHFactory {
 	fun createViewHolder(parent: ViewGroup, viewType: Int, vhEventListener: VHEventListener): CommonVH {
 		return when (viewType) {
 			ViewType.SEARCH_HEADER.ordinal -> SearchHeaderVH(getViewDataBinding(parent, R.layout.item_search_header), vhEventListener)
-			ViewType.SALTIT_AMOUNT.ordinal -> SaltitAmountVH(getViewDataBinding(parent, R.layout.item_saltit_amount))
+			ViewType.SALTIT_AMOUNT.ordinal -> SaltitCashBoxVH(getViewDataBinding(parent, R.layout.item_saltit_cash_box))
 			ViewType.SALTIT_PICK_HEADER.ordinal -> SaltitPickHeaderVH(
 				getViewDataBinding(parent, R.layout.item_saltit_pick_header))
 			ViewType.SALTIT_PICK_STORE.ordinal -> SaltitPickStoreVH(getViewDataBinding(parent, R.layout.item_saltit_pick_store), vhEventListener)

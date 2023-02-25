@@ -58,4 +58,6 @@ dependencies {
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)
     androidTestImplementation(Dependencies.test.expresso)
+
+    implementation(Dependencies.kotlinx.serialization)
 }

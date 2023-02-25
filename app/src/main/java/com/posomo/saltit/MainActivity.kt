@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.saltit_nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.saltitBottomNav, navController)
+
     }
 
     override fun onDestroy() {

@@ -75,25 +75,25 @@ class StickyHeaderItemDecoration(
 	private fun fixLayoutSize(parent: ViewGroup, view: View) {
 
 		// View.MeasureSpec.EXACTLY: match_parent와 같이 정확한 사이즈가 정해진 경우에 할당
-		val widthSpec = View.MeasureSpec.makeMeasureSpec(
+		val viewWidthSpec = View.MeasureSpec.makeMeasureSpec(
 			parent.width,
 			View.MeasureSpec.EXACTLY
 		)
 
 		// View.MeasureSpec.AT_MOST: 주어진 사이즈에서 원하는 크기를 가질 수 있다.
-		val heightSpec = View.MeasureSpec.makeMeasureSpec(
+		val viewHeightSpec = View.MeasureSpec.makeMeasureSpec(
 			parent.height,
 			View.MeasureSpec.AT_MOST
 		)
 
 		val childWidth: Int = ViewGroup.getChildMeasureSpec(
-			widthSpec,
+			viewWidthSpec,
 			parent.paddingLeft + parent.paddingRight,
 			view.layoutParams.width
 		)
 
 		val childHeight: Int = ViewGroup.getChildMeasureSpec(
-			heightSpec,
+			viewHeightSpec,
 			parent.paddingTop + parent.paddingBottom,
 			view.layoutParams.height
 		)

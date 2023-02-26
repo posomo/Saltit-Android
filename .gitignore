@@ -87,3 +87,6 @@ lint/tmp/
 /.idea/compiler.xml
 /.idea/.name
 /.idea/deploymentTargetDropDown.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/git_toolbox_prj.xml

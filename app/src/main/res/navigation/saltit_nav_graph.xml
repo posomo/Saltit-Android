@@ -10,4 +10,8 @@
     <action
         android:id="@+id/action_login_to_home"
         app:destination="@id/home_nav_graph" />
+
+    <action
+        android:id="@+id/action_home_to_login"
+        app:destination="@id/login_nav_graph" />
 </navigation>

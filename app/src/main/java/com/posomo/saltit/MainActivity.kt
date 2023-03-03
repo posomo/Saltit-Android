@@ -51,4 +51,9 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
         binding.saltitBottomNav.visibility = View.VISIBLE
         navController.navigate(R.id.action_login_to_home)
     }
+
+    override fun navigateToLoginFragment() {
+        binding.saltitBottomNav.visibility = View.GONE
+        navController.navigate(R.id.action_home_to_login)
+    }
 }

@@ -6,6 +6,7 @@ object Versions {
     const val lifecycle = "2.5.0"
     const val navigation = "2.5.3"
     const val constraint = "2.1.4"
+    const val splash = "1.0.0-beta01"
 
     // DI
     const val hilt = "2.44"

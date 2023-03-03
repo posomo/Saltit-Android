@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!--  배경 색상 -->
+        <item name="windowSplashScreenBackground">#94b1ff</item>
+        <!--  일반 아이콘 또는 애니메이션 아이콘. 보통 런처 아이콘을 사용. -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <!-- 애니메이션 아이콘 재생 시간. 애니메이션 아이콘일 경우 필수 -->
+        <!-- SplashScreen이 표시되고 사라지는 시간에는 영향을 주지 않는다. -->
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <!-- SplahScreen이 사라진 후 Activity에 적용할 테마를 지정한다. -->
+        <item name="postSplashScreenTheme">@style/Theme.Salitit</item>
+    </style>
+</resources>

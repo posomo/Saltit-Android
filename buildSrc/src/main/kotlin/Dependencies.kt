@@ -8,6 +8,7 @@ object Dependencies {
     val jsonParser = JsonParser
     val network = Network
     val imageLoader = ImageLoader
+    val naver = Naver
     val test = Test
 
     object AndroidX {
@@ -50,6 +51,10 @@ object Dependencies {
     object ImageLoader {
         val glide by lazy { "com.github.bumptech.glide:glide:${Versions.glide}" }
         val glideCompiler by lazy { "com.github.bumptech.glide:compiler:${Versions.glide}" }
+    }
+
+    object Naver {
+        val map by lazy { "com.naver.maps:map-sdk:${Versions.map}" }
     }
 
     object Test {

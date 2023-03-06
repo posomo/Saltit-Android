@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Salitit</string>
-    <string name="saltit_menu_home">home</string>
+    <string name="menu_home">홈</string>
+    <string name="menu_location">주변</string>
+    <string name="menu_saving">가계부</string>
+    <string name="menu_person">MY</string>
 </resources>

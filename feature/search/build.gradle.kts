@@ -1,29 +1,29 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.posomo.saltit"
+    namespace = "com.posomo.saltit.search"
     compileSdk = Configuration.compileSdk
 
     defaultConfig {
-        applicationId = "com.posomo.saltit"
         minSdk = Configuration.minSdk
         targetSdk = Configuration.targetSdk
-        versionCode = Configuration.versionCode
-        versionName = Configuration.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -40,12 +40,8 @@ android {
 
 dependencies {
 
-    implementation(project(":feature:setting"))
-    implementation(project(":feature:saving"))
-    implementation(project(":feature:search"))
-    implementation(project(":feature:home"))
-    implementation(project(":feature:login"))
     implementation(project(":core:common-ui"))
+    implementation(project(":core:model"))
 
     implementation(Dependencies.androidx.core)
     implementation(Dependencies.androidx.appCompat)

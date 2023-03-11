@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,6 +34,18 @@ android {
 }
 
 dependencies {
+
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.retrofit.kotlinxConverter)
+    implementation(Dependencies.okHttp)
+    implementation(Dependencies.okHttp.loggingInterceptor)
+
+    implementation(Dependencies.hilt.android)
+    kapt(Dependencies.hilt.compiler)
+
+    implementation(Dependencies.kotlinx.json)
+    implementation(Dependencies.kotlinx.protobuf)
+    implementation(Dependencies.kotlinx.serialization)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

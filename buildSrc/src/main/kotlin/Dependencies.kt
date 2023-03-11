@@ -5,6 +5,10 @@ object Dependencies {
     val lifecycle = LifeCycle
     val navigation = Navigation
     val hilt = Hilt
+    val retrofit = Retrofit()
+    val okHttp = OkHttp()
+    val kotlinx = KotlinX
+    
     val jsonParser = JsonParser
     val network = Network
     val imageLoader = ImageLoader
@@ -36,6 +40,28 @@ object Dependencies {
     object Hilt {
         val android by lazy { "com.google.dagger:hilt-android:${Versions.hilt}" }
         val compiler by lazy { "com.google.dagger:hilt-compiler:${Versions.hilt}" }
+    }
+
+    class Retrofit(
+        private val name: String = "com.squareup.retrofit2:retrofit:${Versions.retrofit}",
+    ) : CharSequence by name {
+        val kotlinxConverter by lazy { "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.converter}" }
+
+        override fun toString() = name
+    }
+
+    class OkHttp(
+        private val name: String = "com.squareup.okhttp3:okhttp:${Versions.okHttp}",
+    ) : CharSequence by name {
+        val loggingInterceptor by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}" }
+
+        override fun toString() = name
+    }
+
+    object KotlinX {
+        val serialization by lazy { "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinxJVM}" }
+        val json by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinx}" }
+        val protobuf by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-protobuf:${Versions.kotlinx}" }
     }
 
     object Network {

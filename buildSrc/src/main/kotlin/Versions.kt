@@ -17,10 +17,14 @@ object Versions {
     // Network
     const val retrofit = "2.9.0"
     const val okHttpLogging = "4.10.0"
+    const val okHttp = "4.10.0"
     const val sandwich = "1.3.3"
 
     // JsonParser
     const val gson = "2.10.1"
+    const val kotlinx = "1.4.1"
+    const val converter = "0.8.0"
+    const val kotlinxJVM = "1.7.20"
 
     // ImageLoader
     const val glide = "4.14.2"

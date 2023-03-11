@@ -35,14 +35,10 @@ android {
 
 dependencies {
 
-    api(Dependencies.retrofit)
+    implementation(Dependencies.retrofit)
     implementation(Dependencies.retrofit.kotlinxConverter)
     implementation(Dependencies.okHttp)
     implementation(Dependencies.okHttp.loggingInterceptor)
-
-    testImplementation(Dependencies.test.jUnit)
-    androidTestImplementation(Dependencies.test.jUnitExt)
-    androidTestImplementation(Dependencies.test.expresso)
 
     implementation(Dependencies.hilt.android)
     kapt(Dependencies.hilt.compiler)
@@ -50,4 +46,8 @@ dependencies {
     implementation(Dependencies.kotlinx.json)
     implementation(Dependencies.kotlinx.protobuf)
     implementation(Dependencies.kotlinx.serialization)
+
+    testImplementation(Dependencies.test.jUnit)
+    androidTestImplementation(Dependencies.test.jUnitExt)
+    androidTestImplementation(Dependencies.test.expresso)
 }

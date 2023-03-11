@@ -5,8 +5,8 @@ import kotlin.annotation.AnnotationRetention.RUNTIME
 
 @Qualifier
 @Retention(RUNTIME)
-annotation class Dispatcher(val pokedexAppDispatchers: PokedexAppDispatchers)
+annotation class Dispatcher(val dispatchers: SaltitAppDispatchers)
 
-enum class PokedexAppDispatchers {
+enum class SaltitAppDispatchers {
     IO
 }

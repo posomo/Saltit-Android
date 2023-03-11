@@ -3,23 +3,16 @@ package com.posomo.saltit.network.di
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.posomo.saltit.network.interceptor.AuthInterceptor
 import com.posomo.saltit.network.service.SaltitClient
- import com.posomo.saltit.network.service.SaltitService
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.protobuf.ProtoBuf
-import kotlinx.serialization.protobuf.ProtoNumber
-import kotlinx.serialization.json.Json
+import com.posomo.saltit.network.service.SaltitService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.MediaType
+import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.http.GET
-import retrofit2.http.Path
-import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -37,8 +30,8 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAuthInterceptor(@Named("clientId") clientId: String): AuthInterceptor {
-        return AuthInterceptor(clientId)
+    fun provideAuthInterceptor(): AuthInterceptor {
+        return AuthInterceptor()
     }
 
     @Provides

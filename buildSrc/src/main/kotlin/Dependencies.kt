@@ -57,7 +57,7 @@ object Dependencies {
     }
 
     object KotlinX {
-        val serialization by lazy { "org.jetbrains.kotlin:kotlin-serialization:${Versions.jvm}" }
+        val serialization by lazy { "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinxJVM}" }
         val json by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinx}" }
         val protobuf by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-protobuf:${Versions.kotlinx}" }
     }

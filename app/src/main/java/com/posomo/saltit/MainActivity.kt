@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.posomo.saltit.common_ui.util.ActivityUtil
 import com.posomo.saltit.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,9 +25,19 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        initView()
+
+    }
+
+    private fun initView() = with(binding) {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.saltit_nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
-        NavigationUI.setupWithNavController(binding.saltitBottomNav, navController)
+        navController = navHostFragment.navController.apply {
+            addOnDestinationChangedListener { _, destination, _ ->
+                //TODO : Bottom navigation visible
+            }
+        }
+        NavigationUI.setupWithNavController(saltitBottomNav, navController)
+
     }
 
     override fun onDestroy() {

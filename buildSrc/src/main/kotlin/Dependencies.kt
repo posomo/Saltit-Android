@@ -17,6 +17,7 @@ object Dependencies {
         val material by lazy { "com.google.android.material:material:${Versions.material}" }
         val constraint by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraint}" }
         val dataStore by lazy { "androidx.datastore:datastore-preferences:${Versions.datastore}" }
+        val splashScreen by lazy { "androidx.core:core-splashscreen:${Versions.splash}" }
     }
 
     object Kotlin {

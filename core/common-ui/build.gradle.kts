@@ -36,6 +36,8 @@ android {
 
 dependencies {
 
+    implementation(project(":core:model"))
+    
     implementation(Dependencies.androidx.core)
     implementation(Dependencies.androidx.appCompat)
     implementation(Dependencies.androidx.material)

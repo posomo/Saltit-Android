@@ -6,6 +6,7 @@ object Versions {
     const val lifecycle = "2.5.0"
     const val navigation = "2.5.3"
     const val constraint = "2.1.4"
+    const val splash = "1.0.0-beta01"
 
     // DI
     const val hilt = "2.44"
@@ -30,6 +31,9 @@ object Versions {
 
     // DataStore
     const val datastore = "1.0.0"
+
+    // Naver Map
+    const val map = "3.16.2"
 
     // Test
     const val junit = "4.13.2"

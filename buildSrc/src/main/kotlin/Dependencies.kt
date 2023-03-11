@@ -12,6 +12,7 @@ object Dependencies {
     val jsonParser = JsonParser
     val network = Network
     val imageLoader = ImageLoader
+    val naver = Naver
     val test = Test
 
     object AndroidX {
@@ -20,6 +21,7 @@ object Dependencies {
         val material by lazy { "com.google.android.material:material:${Versions.material}" }
         val constraint by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraint}" }
         val dataStore by lazy { "androidx.datastore:datastore-preferences:${Versions.datastore}" }
+        val splashScreen by lazy { "androidx.core:core-splashscreen:${Versions.splash}" }
     }
 
     object Kotlin {
@@ -76,6 +78,10 @@ object Dependencies {
     object ImageLoader {
         val glide by lazy { "com.github.bumptech.glide:glide:${Versions.glide}" }
         val glideCompiler by lazy { "com.github.bumptech.glide:compiler:${Versions.glide}" }
+    }
+
+    object Naver {
+        val map by lazy { "com.naver.maps:map-sdk:${Versions.map}" }
     }
 
     object Test {

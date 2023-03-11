@@ -40,6 +40,9 @@ android {
 
 dependencies {
 
+    implementation(project(":feature:setting"))
+    implementation(project(":feature:saving"))
+    implementation(project(":feature:search"))
     implementation(project(":feature:home"))
     implementation(project(":feature:login"))
     implementation(project(":core:common-ui"))
@@ -48,12 +51,13 @@ dependencies {
     implementation(Dependencies.androidx.appCompat)
     implementation(Dependencies.androidx.material)
     implementation(Dependencies.androidx.constraint)
+    implementation(Dependencies.androidx.splashScreen)
 
     implementation(Dependencies.navigation.ui)
     implementation(Dependencies.navigation.fragment)
 
     implementation(Dependencies.hilt.android)
-    kapt(Dependencies.hilt.compiler)
+	kapt(Dependencies.hilt.compiler)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

@@ -10,4 +10,7 @@ interface ActivityUtil {
 
     // 로그인에서 홈화면으로 이동
     fun navigateToHomeFragment()
+
+    // 로그인에서 홈화면으로 이동
+    fun navigateToLoginFragment()
 }

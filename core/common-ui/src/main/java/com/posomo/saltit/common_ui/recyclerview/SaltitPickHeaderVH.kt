@@ -8,10 +8,10 @@ class SaltitPickHeaderVH(
 ) : CommonVH(binding) {
 
     override fun bind(item: CommonItem) {
-        binding.button1.setOnClickListener {
+        binding.filterButton.setOnClickListener {
         }
 
-        binding.button2.setOnClickListener {
+        binding.priceFilterButton.setOnClickListener {
         }
     }
 

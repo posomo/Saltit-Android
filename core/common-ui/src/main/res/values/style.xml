@@ -131,4 +131,5 @@
         <item name="android:fontFamily">@font/saltit_font_family</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+
 </resources>

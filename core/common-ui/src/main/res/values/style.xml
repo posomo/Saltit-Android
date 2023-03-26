@@ -57,7 +57,6 @@
 
     <style name="Text.SubHead01" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
         <item name="android:textSize">@dimen/font_size_subhead01</item>
         <item name="android:letterSpacing">-0.05</item>
         <item name="android:textColor">@color/black</item>
@@ -67,8 +66,8 @@
 
     <style name="Text.SubHead02" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
         <item name="android:textSize">@dimen/font_size_subhead02</item>
+        <item name="android:letterSpacing">-0.05</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
         <item name="android:includeFontPadding">false</item>
@@ -76,7 +75,6 @@
 
     <style name="Text.SubHead03" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
         <item name="android:textSize">@dimen/font_size_subhead03</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
@@ -85,8 +83,16 @@
 
     <style name="Text.SubHead04" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
         <item name="android:textSize">@dimen/font_size_subhead04</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="font">@font/saltit_font_family_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.SubHead05" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:textSize">@dimen/font_size_subhead05</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
         <item name="android:includeFontPadding">false</item>

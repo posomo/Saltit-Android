@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="saltit_blue_basic">#FFC1C1C1</color>
+    <color name="saltit_blue_basic">#FF00D7ED</color>
     <color name="saltit_blue_app">#FF01CBD8</color>
     <color name="saltit_blue_text">#FF00BAD3</color>
     <color name="saltit_blue_background">#FF46DEED</color>

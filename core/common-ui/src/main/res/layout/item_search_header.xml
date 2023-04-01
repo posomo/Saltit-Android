@@ -48,12 +48,12 @@
             android:layout_width="12dp"
             android:layout_height="14dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginVertical="6.5dp"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/user_location_change_button_icon"
+            android:src="@drawable/img_home_location_change_icon"
             app:layout_constraintStart_toEndOf="@id/search_header_region_text"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/search_header_region_text" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/search_header_edittext"

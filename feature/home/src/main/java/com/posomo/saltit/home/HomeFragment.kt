@@ -45,6 +45,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 			add(CommonItem(ViewType.SPACER))
 			add(CommonItem(ViewType.SALTIT_PICK_HEADER))
 			add(CommonItem(ViewType.SMALL_SPACER))
+			add(CommonItem((ViewType.WHITE_SPACER)))
 			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
 			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
 			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))

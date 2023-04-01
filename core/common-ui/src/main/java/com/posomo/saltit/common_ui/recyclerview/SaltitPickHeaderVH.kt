@@ -1,5 +1,6 @@
 package com.posomo.saltit.common_ui.recyclerview
 
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.posomo.saltit.common_ui.databinding.ItemSaltitPickHeaderBinding
 import com.posomo.saltit.model.CommonItem
 

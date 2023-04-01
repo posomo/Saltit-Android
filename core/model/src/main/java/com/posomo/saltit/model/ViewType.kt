@@ -6,5 +6,6 @@ enum class ViewType {
     SALTIT_PICK_HEADER,
     SALTIT_PICK_Restaurant,
     SMALL_SPACER,
+    WHITE_SPACER,
     SPACER
 }

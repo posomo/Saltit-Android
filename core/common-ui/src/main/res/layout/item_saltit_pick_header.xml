@@ -36,7 +36,7 @@
             android:text="Pick!"
             android:textColor="@color/black"
             style="@style/Text.Title02"
-            android:paddingLeft="3dp"
+            android:paddingLeft="2dp"
             app:layout_constraintStart_toEndOf="@id/saltit_title"
             app:layout_constraintTop_toTopOf="parent" />
 

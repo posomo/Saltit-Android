@@ -16,6 +16,7 @@ object CommonVHFactory {
 				getViewDataBinding(parent, R.layout.item_saltit_pick_header))
 			ViewType.SALTIT_PICK_Restaurant.ordinal -> SaltitPickRestaurantVH(getViewDataBinding(parent, R.layout.item_saltit_pick_restaurant))
 			ViewType.SMALL_SPACER.ordinal -> SmallSpacerVH(getViewDataBinding(parent, R.layout.item_small_spacer))
+			ViewType.WHITE_SPACER.ordinal -> WhiteSpacerVH(getViewDataBinding(parent,R.layout.item_white_spacer))
 			else -> SpacerVH(getViewDataBinding(parent, R.layout.item_spacer))
 		}
 	}

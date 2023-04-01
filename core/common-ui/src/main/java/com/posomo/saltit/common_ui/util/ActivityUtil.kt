@@ -13,4 +13,7 @@ interface ActivityUtil {
 
     // 로그인에서 홈화면으로 이동
     fun navigateToLoginFragment()
+
+    // StatusBar Color 변경
+    fun changeStatusBarColor(color: Int)
 }

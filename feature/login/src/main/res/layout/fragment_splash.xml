@@ -4,7 +4,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/saltit_blue_app">
+        android:background="@color/saltit_blue_background">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/splash_logo_gl_top"

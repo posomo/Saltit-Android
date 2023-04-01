@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:text="짭짤한 점심 추천 앱"
+            android:text="@string/splash_text"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/splash_logo"
             app:layout_constraintStart_toStartOf="@id/splash_logo"

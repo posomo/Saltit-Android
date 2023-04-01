@@ -1,3 +1,4 @@
 <resources>
     <string name="hello_blank_login_fragment">Hello Login fragment</string>
+    <string name="splash_text">짭짤한 점심 추천 앱</string>
 </resources>

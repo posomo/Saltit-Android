@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/saltit_blue_background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splash_logo_gl_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splash_logo_gl_top" />
+
+        <TextView
+            android:id="@+id/splash_text"
+            style="@style/Text.SubHead01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/splash_text"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/splash_logo"
+            app:layout_constraintStart_toStartOf="@id/splash_logo"
+            app:layout_constraintTop_toBottomOf="@id/splash_logo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/img_salit_simbol_big2"
+            app:layout_constraintBottom_toBottomOf="@id/saltit_image1_top_gl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/splash_text"
+            app:layout_constraintStart_toEndOf="@id/splash_saltit_image2_start_gl"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splash_saltit_image2_start_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_simbol1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/img_saltit_simbol"
+            app:layout_constraintEnd_toEndOf="@id/splash_saltit_image2"
+            app:layout_constraintStart_toStartOf="@id/splash_saltit_image2"
+            app:layout_constraintTop_toBottomOf="@id/splash_saltit_image2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_simbol2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/img_saltit_simbol"
+            app:layout_constraintBottom_toBottomOf="@id/splash_saltit_image2"
+            app:layout_constraintEnd_toStartOf="@id/splash_saltit_image2"
+            app:layout_constraintTop_toTopOf="@id/splash_saltit_image2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_simbol3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/img_saltit_simbol"
+            app:layout_constraintBottom_toTopOf="@id/splash_saltit_simbol1"
+            app:layout_constraintEnd_toEndOf="@id/splash_saltit_simbol2"
+            app:layout_constraintStart_toStartOf="@id/splash_saltit_simbol2"
+            app:layout_constraintTop_toBottomOf="@id/splash_saltit_simbol2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_simbol4"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/img_saltit_simbol"
+            app:layout_constraintStart_toStartOf="@id/splash_saltit_simbol3"
+            app:layout_constraintEnd_toEndOf="@id/splash_saltit_simbol1"
+            app:layout_constraintTop_toBottomOf="@id/splash_saltit_simbol1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/splash_saltit_simbol5"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/img_saltit_simbol"
+            app:layout_constraintEnd_toEndOf="@id/splash_saltit_simbol3"
+            app:layout_constraintTop_toBottomOf="@id/splash_saltit_simbol4"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/saltit_image1_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/saltit_image1_end_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_saltit_simbol_big1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/saltit_image1_end_gl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saltit_image1_top_gl" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

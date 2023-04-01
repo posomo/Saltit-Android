@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupWithNavController
 import com.posomo.saltit.common_ui.util.ActivityUtil
 import com.posomo.saltit.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -67,5 +66,9 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
     override fun navigateToLoginFragment() {
         binding.saltitBottomNav.visibility = View.GONE
         navController.navigate(R.id.action_home_to_login)
+    }
+
+    override fun changeStatusBarColor(color: Int) {
+        window.statusBarColor = color
     }
 }

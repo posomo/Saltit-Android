@@ -40,15 +40,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 	private fun getTestItems(): List<CommonItem> {
 		return mutableListOf<CommonItem>().apply {
 			add(CommonItem(ViewType.SEARCH_HEADER))
-			add(CommonItem(ViewType.SALTIT_PICK_HEADER))
-			add(CommonItem(ViewType.SEARCH_HEADER))
+			add(CommonItem(ViewType.SMALL_SPACER))
 			add(CommonItem(ViewType.SALTIT_AMOUNT))
-			add(CommonItem(ViewType.SALTIT_PICK_HEADER))
 			add(CommonItem(ViewType.SPACER))
-			add(CommonItem(ViewType.SALTIT_PICK_STORE))
-			add(CommonItem(ViewType.SALTIT_AMOUNT))
-			add(CommonItem(ViewType.SALTIT_PICK_STORE))
-			add(CommonItem(ViewType.SALTIT_PICK_STORE))
+			add(CommonItem(ViewType.SALTIT_PICK_HEADER))
+			add(CommonItem(ViewType.SMALL_SPACER))
+			add(CommonItem((ViewType.WHITE_SPACER)))
+			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
+			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
+			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
+			add(CommonItem(ViewType.SALTIT_PICK_Restaurant))
 		}.toList()
 	}
 
@@ -74,7 +75,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 					else -> {}
 				}
 			}
-			ViewType.SALTIT_PICK_STORE -> {
+			ViewType.SALTIT_PICK_Restaurant -> {
 				when (component) {
 					VHComponent.SaltitPickStoreComponent.FILTER -> {
 						Log.d("Check@@@", "Test1")

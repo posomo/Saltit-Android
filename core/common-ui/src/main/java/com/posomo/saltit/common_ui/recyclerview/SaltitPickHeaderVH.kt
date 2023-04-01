@@ -1,5 +1,6 @@
 package com.posomo.saltit.common_ui.recyclerview
 
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.posomo.saltit.common_ui.databinding.ItemSaltitPickHeaderBinding
 import com.posomo.saltit.model.CommonItem
 
@@ -8,10 +9,10 @@ class SaltitPickHeaderVH(
 ) : CommonVH(binding) {
 
     override fun bind(item: CommonItem) {
-        binding.button1.setOnClickListener {
+        binding.filterButton.setOnClickListener {
         }
 
-        binding.button2.setOnClickListener {
+        binding.priceFilterButton.setOnClickListener {
         }
     }
 

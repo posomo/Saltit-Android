@@ -34,6 +34,7 @@ object Versions {
 
     // Naver Map
     const val map = "3.16.2"
+    const val location = "16.0.0"
 
     // Test
     const val junit = "4.13.2"

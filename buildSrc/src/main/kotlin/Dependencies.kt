@@ -82,6 +82,7 @@ object Dependencies {
 
     object Naver {
         val map by lazy { "com.naver.maps:map-sdk:${Versions.map}" }
+        val gmsLocation by lazy {"com.google.android.gms:play-services-location:${Versions.location}"}
     }
 
     object Test {

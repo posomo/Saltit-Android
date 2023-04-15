@@ -1,8 +1,15 @@
+import java.io.FileInputStream
+import java.util.*
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+}
+
+val properties = Properties().apply {
+    load(FileInputStream(rootProject.file("apikey.properties")))
 }
 
 android {
@@ -18,8 +25,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            manifestPlaceholders["NAVER_CLIENT_ID"] = properties["naverClientId"] as String
+        }
         release {
             isMinifyEnabled = false
+            manifestPlaceholders["NAVER_CLIENT_ID"] = properties["naverClientId"] as String
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -50,6 +62,9 @@ dependencies {
 
     implementation(Dependencies.navigation.ui)
     implementation(Dependencies.navigation.fragment)
+
+    implementation(Dependencies.naver.map)
+    implementation(Dependencies.naver.gmsLocation)
 
     implementation(Dependencies.hilt.android)
     kapt(Dependencies.hilt.compiler)

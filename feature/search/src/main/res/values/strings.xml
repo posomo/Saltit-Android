@@ -1,4 +1,7 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="distance_m">%1$dm</string>
+    <string name="menu_price">%1$s %2$d원</string>
 </resources>

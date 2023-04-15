@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+  <path
+      android:pathData="M9.104,2.899C9.471,2.156 10.531,2.156 10.898,2.899L12.828,6.81L17.145,7.438C17.965,7.557 18.293,8.565 17.699,9.143L14.575,12.188L15.313,16.487C15.453,17.304 14.596,17.927 13.862,17.541L10.001,15.512L6.14,17.541C5.407,17.927 4.549,17.304 4.689,16.487L5.427,12.188L2.303,9.143C1.71,8.565 2.037,7.557 2.857,7.438L7.174,6.81L9.104,2.899Z"
+      android:fillColor="@color/saltit_sub_orange"/>
+</vector>

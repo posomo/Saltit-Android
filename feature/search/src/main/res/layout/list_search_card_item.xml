@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.posomo.saltit.model.search.SearchCardItem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_card_item_rounded"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@color/saltit_gray_02"
+                app:layout_constraintEnd_toStartOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/Text.Title04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text='@{item.order + ". " + item.name}'
+                app:layout_constraintBottom_toTopOf="@id/ivRateStar"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="@id/imageView"
+                tools:text="2.오근내 닭갈비" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                style="@style/Text.Body04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{item.category}"
+                app:layout_constraintBottom_toBottomOf="@id/tvName"
+                app:layout_constraintStart_toEndOf="@id/tvName"
+                app:layout_constraintTop_toTopOf="@id/tvName"
+                tools:text="한식/우동" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                style="@style/Text.Title06"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:text='@{item.distance + "m"}'
+                app:layout_constraintBottom_toBottomOf="@id/tvCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvCategory"
+                app:layout_constraintTop_toTopOf="@id/tvCategory"
+                tools:text="820m" />
+
+            <ImageView
+                android:id="@+id/ivRateStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvRate"
+                style="@style/Text.Title05"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="2sp"
+                android:text="@{String.valueOf(item.rate)}"
+                android:textColor="@color/saltit_gray_01"
+                app:layout_constraintBottom_toBottomOf="@id/ivRateStar"
+                app:layout_constraintStart_toEndOf="@id/ivRateStar"
+                app:layout_constraintTop_toTopOf="@id/ivRateStar"
+                tools:text="5.0" />
+
+            <TextView
+                android:id="@+id/tvMenu"
+                style="@style/Text.Body04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_search_card_menu_text_view"
+                android:paddingHorizontal="4dp"
+                android:paddingTop="2dp"
+                android:text='@{item.menu + " " + item.price + "원"}'
+                android:textColor="@color/saltit_blue_text"
+                app:layout_constraintBottom_toBottomOf="@id/tvRate"
+                app:layout_constraintStart_toEndOf="@id/tvRate"
+                app:layout_constraintTop_toTopOf="@id/tvRate"
+                tools:text="할매우동 8000원" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -36,16 +36,12 @@ android {
 dependencies {
 
     implementation(Dependencies.retrofit)
-    implementation(Dependencies.retrofit.kotlinxConverter)
+    implementation(Dependencies.jsonParser.gsonConverter)
     implementation(Dependencies.okHttp)
     implementation(Dependencies.okHttp.loggingInterceptor)
 
     implementation(Dependencies.hilt.android)
     kapt(Dependencies.hilt.compiler)
-
-    implementation(Dependencies.kotlinx.json)
-    implementation(Dependencies.kotlinx.protobuf)
-    implementation(Dependencies.kotlinx.serialization)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

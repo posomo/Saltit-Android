@@ -7,3 +7,7 @@ java {
     sourceCompatibility = Configuration.javaVersion
     targetCompatibility = Configuration.javaVersion
 }
+
+dependencies {
+    implementation(Dependencies.jsonParser.gson)
+}

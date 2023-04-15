@@ -1,13 +1,14 @@
 package com.posomo.saltit.network.service
 
-import com.posomo.saltit.network.model.SaltitResponse
-import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import com.posomo.saltit.model.request.RestaurantSummaryRequest
+import com.posomo.saltit.network.model.RestaurantSummaryResponse
+import com.skydoves.sandwich.ApiResponse
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface SaltitService {
-    @GET("albums/{id}")
-    fun getAlbum(@Path("id") id: Int): Call<SaltitResponse>
+    @POST("home/restaurant-summary")
+    suspend fun sendRestaurantSummaryInfoReq(
+        @Body restaurantSummaryBody: RestaurantSummaryRequest
+    ): ApiResponse<RestaurantSummaryResponse>
 }

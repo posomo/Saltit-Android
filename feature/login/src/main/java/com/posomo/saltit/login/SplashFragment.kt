@@ -7,11 +7,13 @@ import com.posomo.saltit.common_ui.R.color.white
 import com.posomo.saltit.common_ui.base.BaseFragment
 import com.posomo.saltit.common_ui.util.ActivityUtil
 import com.posomo.saltit.login.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_splash) {
 
 	override fun initView() {

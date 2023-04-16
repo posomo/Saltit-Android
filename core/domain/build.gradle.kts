@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,6 +34,19 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":core:model"))
+    implementation(project(":core:data"))
+
+
+    implementation(Dependencies.Network.sandwich)
+
+    // coroutines
+    implementation(Dependencies.kotlin.coroutine)
+
+    // di
+    implementation(Dependencies.hilt.android)
+    kapt(Dependencies.hilt.compiler)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

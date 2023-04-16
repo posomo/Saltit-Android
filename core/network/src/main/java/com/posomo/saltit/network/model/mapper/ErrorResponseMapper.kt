@@ -1,12 +1,12 @@
 package com.posomo.saltit.network.model.mapper
 
-/**
- * A customized pokemon error response.
- *
- * @param code A network response code.
- * @param message A network error message.
- */
-data class SaltitErrorResponse(
-    val code: Int,
-    val message: String?
-)
+import com.posomo.saltit.network.model.SaltitErrorResponse
+import com.skydoves.sandwich.ApiErrorModelMapper
+import com.skydoves.sandwich.ApiResponse
+import com.skydoves.sandwich.message
+
+object ErrorResponseMapper : ApiErrorModelMapper<SaltitErrorResponse> {
+    override fun map(apiErrorResponse: ApiResponse.Failure.Error<*>): SaltitErrorResponse {
+        return SaltitErrorResponse(apiErrorResponse.statusCode.code, apiErrorResponse.message())
+    }
+}

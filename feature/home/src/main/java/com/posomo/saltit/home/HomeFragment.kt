@@ -2,6 +2,7 @@ package com.posomo.saltit.home
 
 import android.util.Log
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.posomo.saltit.common_ui.R.layout.item_saltit_pick_header
@@ -13,11 +14,13 @@ import com.posomo.saltit.common_ui.recyclerview.VHEventListener
 import com.posomo.saltit.home.databinding.FragmentHomeBinding
 import com.posomo.saltit.model.CommonItem
 import com.posomo.saltit.model.ViewType
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), VHEventListener {
 
 	private lateinit var commonAdapter: CommonAdapter
-
+	private val viewModel by viewModels<HomeViewModel>()
 	override fun initView() {
 		val testItems = getTestItems()
 
@@ -34,6 +37,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home), 
 			layoutManager = LinearLayoutManager(requireContext())
 			adapter = commonAdapter
 			addItemDecoration(StickyHeaderItemDecoration(getSectionCallback()))
+		}
+
+		viewModel.resTest2.observe(this) {
+			Log.d("Check@@@", "$it")
 		}
 	}
 

@@ -38,6 +38,7 @@ android {
 
 dependencies {
 
+    implementation(project(":core:domain"))
     implementation(project(":core:common-ui"))
     implementation(project(":core:model"))
 

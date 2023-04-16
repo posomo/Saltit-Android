@@ -7,7 +7,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface SaltitService {
-    @POST("home/restaurant-summary")
+    @POST("api/v1/home/restaurant-summary")
     suspend fun sendRestaurantSummaryInfoReq(
         @Body restaurantSummaryBody: RestaurantSummaryRequest
     ): ApiResponse<RestaurantSummaryResponse>

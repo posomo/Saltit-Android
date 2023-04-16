@@ -1,4 +1,4 @@
-package com.posomo.saltit.network.model
+package com.posomo.saltit.model.response
 
 import com.google.gson.annotations.SerializedName
 import com.posomo.saltit.model.dto.RestaurantSummaryDto

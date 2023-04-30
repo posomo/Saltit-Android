@@ -8,16 +8,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="saltit_layout_background">#FFF8F8F8</color>
+
     <color name="saltit_blue_basic">#FF00D7ED</color>
     <color name="saltit_blue_app">#FF01CBD8</color>
     <color name="saltit_blue_text">#FF00BAD3</color>
     <color name="saltit_blue_background">#FF46DEED</color>
+    <color name="saltit_blue_background1">#FF4AD3DC</color>
     <color name="saltit_blue_background2">#FFE6FAFB</color>
     <color name="saltit_sub_orange">#FFEF9A5C</color>
 
     <color name="saltit_black">#FF111111</color>
     <color name="saltit_gray_01">#FF6F6F6F</color>
-    <color name="saltit_gray_02">#FF888888</color>
+    <color name="saltit_gray_02">#FF8B8B8B</color>
 
     <color name="saltit_light_gray_01">#FFC1C1C1</color>
     <color name="saltit_light_gray_02">#FFDFDFDF</color>

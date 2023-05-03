@@ -27,7 +27,7 @@ class SaltitRepositoryImpl @Inject constructor(
         onComplete: () -> Unit,
         onError: (String?) -> Unit
     ) = flow {
-        val response = saltitService.sendRestaurantSummaryInfoReq(request)
+        val response = saltitService.fetchRestaurantSummary(request)
         response.suspendOnSuccess {
             emit(data.restaurantSummaries)
         }.onError {

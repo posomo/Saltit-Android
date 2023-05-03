@@ -53,6 +53,9 @@ dependencies {
     implementation(Dependencies.hilt.android)
     kapt(Dependencies.hilt.compiler)
 
+    implementation(Dependencies.ImageLoader.glide)
+    annotationProcessor(Dependencies.ImageLoader.glideCompiler)
+
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)
     androidTestImplementation(Dependencies.test.expresso)

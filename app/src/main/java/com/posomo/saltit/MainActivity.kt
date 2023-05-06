@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val splashScreen = installSplashScreen()
+        installSplashScreen()
 
         // Splash 화면을 유지하고 싶을 경우 주석 해제
 //        splashScreen.setKeepOnScreenCondition { true }
@@ -39,11 +39,7 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
     private fun initView() = with(binding) {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.saltit_nav_host_fragment) as NavHostFragment
         
-        navController = navHostFragment.navController.apply {
-            addOnDestinationChangedListener { _, destination, _ ->
-                //TODO : Bottom navigation visible
-            }
-        }
+        navController = navHostFragment.navController
         NavigationUI.setupWithNavController(saltitBottomNav, navController)
     }
 

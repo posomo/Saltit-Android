@@ -10,12 +10,11 @@ class GetRestaurantSummaryUseCase @Inject constructor(
 ) {
 	operator fun invoke(
 		request: RestaurantSummaryRequest,
-		page: Int,
 		onStart: () -> Unit = {},
 		onComplete: () -> Unit = {},
 		onError: (String?) -> Unit = {}
 	) = flow {
-		saltitRepository.getRestaurantSummaryData(request, page, onStart, onComplete, onError).collect {
+		saltitRepository.getRestaurantSummaryData(request, onStart, onComplete, onError).collect {
 			emit(it)
 		}
 	}

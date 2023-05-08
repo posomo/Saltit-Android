@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.posomo.saltit.model.domain.RestaurantSummary" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_pick_restaurant_image_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintDimensionRatio="w, 9:16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_pick_restaurant_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:imageUrl="@{item.titleImageUrl}"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/item_pick_restaurant_name"
+            style="@style/Text.Title02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{item.restaurantName}"
+            app:layout_constraintStart_toStartOf="@id/item_pick_restaurant_image_area"
+            app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_image_area"
+            tools:text="킨다" />
+
+        <TextView
+            android:id="@+id/item_pick_restaurant_type"
+            style="@style/Text.SubHead04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{item.categoryName}"
+            app:layout_constraintBaseline_toBaselineOf="@id/item_pick_restaurant_name"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_name"
+            tools:text="생선구이, 일식" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_pick_restaurant_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_star_orange"
+            app:layout_constraintStart_toStartOf="@id/item_pick_restaurant_name"
+            app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_name" />
+
+        <TextView
+            android:id="@+id/item_pick_restaurant_rate"
+            style="@style/Text.SubHead03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@{String.valueOf(item.rating)}"
+            android:textColor="@color/saltit_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/item_pick_restaurant_star"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_star"
+            app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_star"
+            tools:text="4.4" />
+
+        <View
+            android:id="@+id/item_pick_restaurant_rate_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/saltit_light_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/item_pick_restaurant_rate"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_rate"
+            app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_rate" />
+
+        <TextView
+            android:id="@+id/item_pick_restaurant_dist"
+            style="@style/Text.SubHead03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{item.distance}"
+            tools:text="452m"
+            android:textColor="@color/saltit_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/item_pick_restaurant_rate"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_rate_divider"
+            app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_rate" />
+
+        <View
+            android:id="@+id/item_pick_restaurant_dist_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/saltit_light_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/item_pick_restaurant_dist"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_dist"
+            app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_dist" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_saltit_blue2_round"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/item_pick_restaurant_dist"
+            app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_dist_divider"
+            app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_dist">
+
+            <TextView
+                style="@style/Text.SubHead03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예산 내 메뉴"
+                android:textColor="@color/saltit_blue_text" />
+
+            <TextView
+                style="@style/Text.Title04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="5개"
+                android:textColor="@color/saltit_blue_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/bg_saltit_light_gray3_round"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_star">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생선구이 정식" />
+
+            <TextView
+                style="@style/Text.Title04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="9,500원"
+                android:textColor="@color/saltit_gray_02" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

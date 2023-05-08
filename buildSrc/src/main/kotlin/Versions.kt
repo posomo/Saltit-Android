@@ -27,7 +27,7 @@ object Versions {
     const val kotlinxJVM = "1.7.20"
 
     // ImageLoader
-    const val glide = "4.14.2"
+    const val glide = "4.15.1"
 
     // DataStore
     const val datastore = "1.0.0"

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.posomo.saltit.domain.usecase.GetRestaurantSummaryUseCase
-import com.posomo.saltit.model.dto.RestaurantSummaryDto
+import com.posomo.saltit.model.domain.RestaurantSummary
 import com.posomo.saltit.model.request.RestaurantSummaryRequest
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
@@ -17,16 +17,15 @@ class HomeViewModel @Inject constructor(
 	private val getRestaurantSummaryUseCase: GetRestaurantSummaryUseCase
 ) : ViewModel() {
 
-	private val resTest = MutableLiveData<List<RestaurantSummaryDto>>()
-	val resTest2: LiveData<List<RestaurantSummaryDto>> = resTest
+	private val _restaurantSummaries = MutableLiveData<List<RestaurantSummary>>()
+	val restaurantSummaries: LiveData<List<RestaurantSummary>> = _restaurantSummaries
 
 	init {
 		viewModelScope.launch {
 			getRestaurantSummaryUseCase(
 				request = RestaurantSummaryRequest("한식", 1000, 8500, 1, 3, 127.0521f, 37.5033f),
-				page = 0
             ).collectLatest {
-				resTest.value = it
+				_restaurantSummaries.value = it
 			}
 		}
 	}

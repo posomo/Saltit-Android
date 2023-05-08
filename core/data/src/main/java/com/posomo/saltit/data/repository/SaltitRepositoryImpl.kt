@@ -2,6 +2,7 @@ package com.posomo.saltit.data.repository
 
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.WorkerThread
+import com.posomo.saltit.data.mapper.asDomain
 import com.posomo.saltit.model.*
 import com.posomo.saltit.model.request.RestaurantSummaryRequest
 import com.posomo.saltit.network.Dispatcher
@@ -22,14 +23,13 @@ class SaltitRepositoryImpl @Inject constructor(
     @WorkerThread
     override fun getRestaurantSummaryData(
         request: RestaurantSummaryRequest,
-        page: Int,
         onStart: () -> Unit,
         onComplete: () -> Unit,
         onError: (String?) -> Unit
     ) = flow {
-        val response = saltitService.sendRestaurantSummaryInfoReq(request)
+        val response = saltitService.fetchRestaurantSummary(request)
         response.suspendOnSuccess {
-            emit(data.restaurantSummaries)
+            emit(data.restaurantSummaries.asDomain())
         }.onError {
             map(ErrorResponseMapper) { onError("[Code: $code]: $message") }
         }.onException { onException { onError(message) } }

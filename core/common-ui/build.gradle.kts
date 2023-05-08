@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -42,6 +43,8 @@ dependencies {
     implementation(Dependencies.androidx.appCompat)
     implementation(Dependencies.androidx.material)
     implementation(Dependencies.androidx.constraint)
+
+    implementation(Dependencies.ImageLoader.glide)
 
     testImplementation(Dependencies.test.jUnit)
     androidTestImplementation(Dependencies.test.jUnitExt)

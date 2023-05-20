@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- font size -->
-    <dimen name="font_size_title01">24sp</dimen>
-    <dimen name="font_size_title02">20sp</dimen>
-    <dimen name="font_size_title03">18sp</dimen>
-    <dimen name="font_size_title04">16sp</dimen>
-    <dimen name="font_size_title05">14dp</dimen>
-    <dimen name="font_size_title06">12sp</dimen>
+    <dimen name="font_size_title01">36sp</dimen>
+    <dimen name="font_size_title02">32sp</dimen>
+    <dimen name="font_size_title03">28sp</dimen>
+    <dimen name="font_size_title04">28sp</dimen>
+    <dimen name="font_size_title05">24sp</dimen>
+    <dimen name="font_size_title06">20sp</dimen>
+    <dimen name="font_size_title07">18sp</dimen>
+    <dimen name="font_size_title08">18sp</dimen>
+    <dimen name="font_size_title09">16sp</dimen>
+    <dimen name="font_size_title10">15sp</dimen>
+    <dimen name="font_size_title11">14dp</dimen>
+    <dimen name="font_size_title12">12sp</dimen>
 
-    <dimen name="font_size_subhead01">20sp</dimen>
-    <dimen name="font_size_subhead02">18sp</dimen>
-    <dimen name="font_size_subhead03">16sp</dimen>
-    <dimen name="font_size_subhead04">14sp</dimen>
-    <dimen name="font_size_subhead05">12sp</dimen>
+    <dimen name="font_size_subhead01">24sp</dimen>
+    <dimen name="font_size_subhead02">24sp</dimen>
+    <dimen name="font_size_subhead03">20sp</dimen>
+    <dimen name="font_size_subhead04">18sp</dimen>
+    <dimen name="font_size_subhead05">16sp</dimen>
+    <dimen name="font_size_subhead06">15sp</dimen>
+    <dimen name="font_size_subhead07">14sp</dimen>
+    <dimen name="font_size_subhead08">12sp</dimen>
 
     <dimen name="font_size_body01">18sp</dimen>
     <dimen name="font_size_body02">16sp</dimen>

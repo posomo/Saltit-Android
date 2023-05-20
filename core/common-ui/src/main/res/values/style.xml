@@ -36,7 +36,6 @@
     <style name="Text.Title05" parent="android:TextAppearance">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/font_size_title05</item>
-        <item name="android:letterSpacing">-0.02</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/saltit_font_family</item>
         <item name="android:includeFontPadding">false</item>
@@ -50,10 +49,59 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="Text.Title07" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title07</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Title08" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title08</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Title09" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title09</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Title10" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title10</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Title11" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title11</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Title12" parent="android:TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_size_title12</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/saltit_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="Text.SubHead01" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/font_size_subhead01</item>
-        <item name="android:letterSpacing">-0.05</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
         <item name="android:includeFontPadding">false</item>
@@ -62,9 +110,8 @@
     <style name="Text.SubHead02" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/font_size_subhead02</item>
-        <item name="android:letterSpacing">-0.05</item>
         <item name="android:textColor">@color/black</item>
-        <item name="font">@font/saltit_font_family_medium</item>
+        <item name="font">@font/saltit_font_family</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
@@ -79,6 +126,7 @@
     <style name="Text.SubHead04" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/font_size_subhead04</item>
+        <item name="android:letterSpacing">-0.05</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
         <item name="android:includeFontPadding">false</item>
@@ -87,6 +135,30 @@
     <style name="Text.SubHead05" parent="android:TextAppearance">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/font_size_subhead05</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="font">@font/saltit_font_family_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.SubHead06" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/font_size_subhead06</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="font">@font/saltit_font_family_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.SubHead07" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/font_size_subhead07</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="font">@font/saltit_font_family_medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.SubHead08" parent="android:TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/font_size_subhead08</item>
         <item name="android:textColor">@color/black</item>
         <item name="font">@font/saltit_font_family_medium</item>
         <item name="android:includeFontPadding">false</item>

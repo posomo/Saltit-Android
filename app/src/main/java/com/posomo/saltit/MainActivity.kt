@@ -1,5 +1,6 @@
 package com.posomo.saltit
 
+import com.posomo.saltit.domain.util.PreferenceUtil
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-
+    companion object {
+        private lateinit var prefs: PreferenceUtil
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
 
         installSplashScreen()
@@ -30,7 +33,7 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
 
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        prefs = PreferenceUtil(applicationContext)
         supportActionBar?.hide()
         initView()
 
@@ -48,11 +51,27 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
         super.onDestroy()
     }
 
+    /** [PreferenceUtil] */
+    override fun getUserCurrentAvgLunchPriceInLocal(price: Int): Int{
+        return MainActivity.prefs.getUserCurrentAvgLunchPrice(price)
+    }
+
+    override fun setUserCurrentAvgLunchPriceInLocal(price: Int) {
+        MainActivity.prefs.setUserCurrentAvgLunchPrice(price)
+    }
+
+    override fun getUserIdealAvgLunchPriceInLocal(price: Int): Int{
+        return MainActivity.prefs.getUserIdealAvgLunchPrice(price)
+    }
+
+    override fun setUserIdealAvgLunchPriceInLocal(price: Int) {
+        MainActivity.prefs.setUserIdealAvgLunchPrice(price)
+    }
+
     /** [ActivityUtil] */
     override fun hideBottomNavigationView() {
         binding.saltitBottomNav.visibility = View.GONE
     }
-
 
     override fun navigateToHomeFragment() {
         binding.saltitBottomNav.visibility = View.VISIBLE

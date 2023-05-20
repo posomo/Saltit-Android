@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty150_start_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.68"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty150_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.59"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty150_btm_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty30_end_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty30_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_salty30_btm_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_salty_rotate_150"
+            app:layout_constraintBottom_toTopOf="@id/onboarding2_salty150_btm_gl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/onboarding2_salty150_start_gl"
+            app:layout_constraintTop_toBottomOf="@id/onboarding2_salty150_top_gl" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_salty_rotate_30"
+            app:layout_constraintBottom_toTopOf="@id/onboarding2_salty30_btm_gl"
+            app:layout_constraintEnd_toStartOf="@id/onboarding2_salty30_end_gl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onboarding2_salty30_top_gl" />
+
+        <TextView
+            android:id="@+id/onboarding2_question_text_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:bufferType="spannable"
+            android:text="이상적인 점심값은"
+            android:layout_marginTop="57dp"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="@color/saltit_gray_01"
+            android:fontFamily="@font/saltit_font_family_medium"
+            app:layout_constraintTop_toTopOf="@+id/onboarding2_salty30_btm_gl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/onboarding2_question_text_subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="얼마라고 생각하세요?"
+            android:layout_marginTop="47dp"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="@color/saltit_gray_01"
+            android:fontFamily="@font/saltit_font_family_medium"
+            app:layout_constraintTop_toTopOf="@+id/onboarding2_question_text_head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/onboarding2_user_lunch_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding2_question_text_subhead"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/onboarding2_user_lunch_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:hint="8,000"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                android:textColor="@color/saltit_blue_text"
+                android:fontFamily="@font/saltit_font_family"
+                />
+
+            <TextView
+                android:id="@+id/onboarding2_user_lunch_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="원"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                android:textColor="@color/saltit_blue_text"
+                android:fontFamily="@font/saltit_font_family"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_seekbar_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.81"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_seekbar_start_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.13"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding2_seekbar_end_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87"/>
+
+        <SeekBar
+            android:id="@+id/onboarding2_user_lunch_price_seekbar"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:max="20000"
+            android:min="4000"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:progress="10000"
+            android:translationX="-4dp"
+            android:progressDrawable="@drawable/onboarding2_seekbar"
+            android:splitTrack="false"
+            android:thumb="@drawable/onboarding2_seekbar_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding2_seekbar_top_gl"
+            app:layout_constraintStart_toStartOf="@+id/onboarding2_seekbar_start_gl"
+            app:layout_constraintEnd_toStartOf="@+id/onboarding2_seekbar_end_gl"/>
+
+        <TextView
+            android:id="@+id/onboarding2_seekbar_explain_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/onboarding2_seekbar_explain_arrow"
+            android:gravity="center"
+            android:drawablePadding="2dp"
+            android:text="원을 움직여 보세요"
+            android:textColor="@color/saltit_gray_02"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_next"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding2_user_lunch_price_seekbar" />
+
+        <Button
+            android:id="@+id/txt_next"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="40dp"
+            android:text="다음"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/saltit_font_family"
+            android:background="@drawable/onboarding_next_btn_background"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding2_user_lunch_price_seekbar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

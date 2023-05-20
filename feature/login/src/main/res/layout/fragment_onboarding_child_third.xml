@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/onboarding3_saltit_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="158dp"
+            android:src="@drawable/img_saltit_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/onboarding3_head_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="솔팃과 함께"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="@color/saltit_gray_01"
+            android:fontFamily="@font/saltit_font_family_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_saltit_logo" />
+
+        <TextView
+            android:id="@+id/onboarding3_head_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="한달 점심값에서"
+            android:textStyle="normal"
+            android:textSize="28sp"
+            android:textColor="@color/saltit_gray_01"
+            android:fontFamily="@font/saltit_font_family_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_head_txt" />
+
+        <LinearLayout
+            android:id="@+id/onboarding3_money_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_head_txt2">
+
+            <TextView
+                android:id="@+id/onboarding3_monthly_saving_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="80,000"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                android:textColor="@color/saltit_blue_text"
+                android:fontFamily="@font/saltit_font_family"/>
+
+            <TextView
+                android:id="@+id/onboarding3_monthly_saving_money_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="원"
+                android:textStyle="normal"
+                android:textSize="28sp"
+                android:textColor="@color/saltit_gray_01"
+                android:fontFamily="@font/saltit_font_family_medium"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/onboarding3_subhead_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="모아보세요!"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="@color/saltit_gray_02"
+            android:fontFamily="@font/saltit_font_family_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_money_layout" />
+
+        <ImageView
+            android:id="@+id/onboarding3_salty_fairy_opacity"
+            android:layout_width="123dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/img_salty_opacity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_subhead_txt" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/onboarding3_next_button_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.81"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="60dp"
+            android:text="다음"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/saltit_font_family"
+            android:background="@drawable/onboarding_next_btn_background"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding3_next_button_top_gl"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -9,6 +9,6 @@ data class SearchCardItem(
     val distance: Int,
     val menu: String,
     val price: Int,
-    val lat: Float,
-    val log: Float,
+    val lat: Double,
+    val log: Double,
 )

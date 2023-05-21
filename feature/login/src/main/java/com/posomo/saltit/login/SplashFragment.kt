@@ -28,20 +28,12 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
 		)
 
 		CoroutineScope(Dispatchers.Main).launch {
-			delay(3000)
-
+			delay(500)
 			if (isOnBoardingFinished()) {
 				(activity as ActivityUtil).navigateToHomeFragment()
 			} else {
 				findNavController().navigate(R.id.action_splashFragment_to_onboardingFragment)
 			}
-
-			(activity as ActivityUtil).changeStatusBarColor(
-				ContextCompat.getColor(
-					requireContext(),
-					white
-				)
-			)
 		}
 	}
 

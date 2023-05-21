@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.posomo.saltit.model.domain.RestaurantDetail" />
+
+        <variable
+            name="shareClickEvent"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/Text.Title01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="@{model.name}"
+            app:layout_constraintBottom_toTopOf="@id/tvCategory"
+            app:layout_constraintEnd_toStartOf="@id/ivShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="place name" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            style="@style/Text.Body02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{model.categories}"
+            android:textColor="@color/saltit_gray_02"
+            app:layout_constraintBottom_toTopOf="@id/tvMainMenu"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="korean, korean" />
+
+        <TextView
+            android:id="@+id/tvMainMenu"
+            style="@style/Text.Body01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/saltit_gray_01"
+            app:layout_constraintStart_toStartOf="@id/tvCategory"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory"
+            tools:text="main menu" />
+
+        <TextView
+            android:id="@+id/tvMainMenuPrice"
+            style="@style/Text.Title03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/saltit_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/tvMainMenu"
+            app:layout_constraintStart_toEndOf="@id/tvMainMenu"
+            app:layout_constraintTop_toTopOf="@id/tvMainMenu"
+            tools:text="10,000 won" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> shareClickEvent}"
+            android:paddingStart="10dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            style="@style/Text.Body02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.rating}"
+            android:textColor="@color/saltit_gray_01"
+            app:layout_constraintBottom_toBottomOf="@id/tvMainMenuPrice"
+            app:layout_constraintEnd_toEndOf="@id/ivShare"
+            app:layout_constraintTop_toTopOf="@id/tvMainMenuPrice"
+            tools:text="5.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintBottom_toBottomOf="@id/tvRating"
+            app:layout_constraintEnd_toStartOf="@id/tvRating"
+            app:layout_constraintTop_toTopOf="@id/tvRating" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/saltit_gray_02"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMainMenuPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

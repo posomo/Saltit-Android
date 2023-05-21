@@ -45,6 +45,7 @@ dependencies {
     implementation(project(":feature:search"))
     implementation(project(":feature:home"))
     implementation(project(":feature:login"))
+    implementation(project(":feature:place-info"))
     implementation(project(":core:common-ui"))
     implementation(project(":core:domain"))
 

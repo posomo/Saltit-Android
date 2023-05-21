@@ -14,6 +14,9 @@ interface ActivityUtil {
     // 로그인에서 홈화면으로 이동
     fun navigateToLoginFragment()
 
+    // 홈화면에서 가게 상세 화면으로 이동
+    fun navigateToPlaceInfoFragment(id: Int)
+
     // StatusBar Color 변경
     fun changeStatusBarColor(color: Int)
 

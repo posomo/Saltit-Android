@@ -93,4 +93,3 @@ lint/tmp/
 /.idea/codeStyles/codeStyleConfig.xml
 /.idea/codeStyles/Project.xml
 /.idea/git_toolbox_prj.xml
-/app/src/main/res/xml/network_security_config.xml

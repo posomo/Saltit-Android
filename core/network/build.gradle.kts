@@ -17,15 +17,17 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        buildConfigField("String","API_URL", getApiKey("API_URL"))
     }
 
     buildTypes {
-        release {
+        getByName("debug") {
+            buildConfigField("String","API_URL", "\"http://3.37.235.73\"")
+        }
+
+        getByName("release") {
+            buildConfigField("String", "API_URL", "\"http://3.35.147.39\"")
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
@@ -35,10 +37,6 @@ android {
     kotlinOptions {
         jvmTarget = Configuration.jvmTarget
     }
-}
-
-fun getApiKey(propertyKey: String): String {
-    return gradleLocalProperties(rootDir).getProperty(propertyKey)
 }
 
 dependencies {

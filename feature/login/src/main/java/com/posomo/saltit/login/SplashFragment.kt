@@ -1,5 +1,6 @@
 package com.posomo.saltit.login
 
+import android.content.Context
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.posomo.saltit.common_ui.R.color.saltit_blue_background
@@ -29,7 +30,11 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
 		CoroutineScope(Dispatchers.Main).launch {
 			delay(3000)
 
-			findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+			if (isOnBoardingFinished()) {
+				(activity as ActivityUtil).navigateToHomeFragment()
+			} else {
+				findNavController().navigate(R.id.action_splashFragment_to_onboardingFragment)
+			}
 
 			(activity as ActivityUtil).changeStatusBarColor(
 				ContextCompat.getColor(
@@ -38,5 +43,10 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
 				)
 			)
 		}
+	}
+
+	private fun isOnBoardingFinished(): Boolean {
+		val prefs = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+		return prefs.getBoolean("finished", false)
 	}
 }

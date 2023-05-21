@@ -46,6 +46,7 @@ dependencies {
     implementation(project(":feature:home"))
     implementation(project(":feature:login"))
     implementation(project(":core:common-ui"))
+    implementation(project(":core:domain"))
 
     implementation(Dependencies.androidx.core)
     implementation(Dependencies.androidx.appCompat)

@@ -9,13 +9,27 @@
         android:id="@+id/loginFragment"
         android:name="com.posomo.saltit.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_onboarding_child_third" />
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.posomo.saltit.login.SplashFragment"
         android:label="SplashFragment" >
         <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
             android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.posomo.saltit.login.OnboardingFragment"
+        android:label="fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

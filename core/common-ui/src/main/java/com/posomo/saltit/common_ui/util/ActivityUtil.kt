@@ -16,4 +16,12 @@ interface ActivityUtil {
 
     // StatusBar Color 변경
     fun changeStatusBarColor(color: Int)
+
+    fun getUserCurrentAvgLunchPriceInLocal(price: Int): Int
+
+    fun setUserCurrentAvgLunchPriceInLocal(price: Int)
+
+    fun getUserIdealAvgLunchPriceInLocal(price: Int): Int
+
+    fun setUserIdealAvgLunchPriceInLocal(price: Int)
 }

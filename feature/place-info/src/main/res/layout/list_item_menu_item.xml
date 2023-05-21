@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.posomo.saltit.model.dto.MenuDto" />
+
+        <variable
+            name="budget"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp">
+
+        <TextView
+            android:id="@+id/tvMenuName"
+            style="@style/Text.SubHead04"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="17dp"
+            android:text="@{model.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="점심특선 된장찌개" />
+
+        <TextView
+            android:id="@+id/tvSavingHelper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvMenuName"
+            app:layout_constraintTop_toBottomOf="@id/tvMenuName"
+            app:savingHelper="@{budget - model.price}" />
+
+        <TextView
+            android:id="@+id/tvMenuPrice"
+            style="@style/Text.Title02"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/tvMenuName"
+            app:layout_constraintTop_toBottomOf="@id/tvSavingHelper"
+            app:price="@{model.price}"
+            tools:text="10,000 원" />
+
+        <TextView
+            android:id="@+id/tvRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_menu_recommend"
+            android:gravity="center"
+            android:text="추천"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvMenuName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvMenuName" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5px"
+            android:layout_marginTop="17dp"
+            android:background="@color/saltit_gray_02"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMenuPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

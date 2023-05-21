@@ -8,11 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.posomo.saltit.home.databinding.ItemSaltitPickRestaurantBinding
 import com.posomo.saltit.model.domain.RestaurantSummary
 
-class HomeAdapter : ListAdapter<RestaurantSummary, HomeAdapter.ViewHolder>(RestaurantSummaryCallback) {
+class HomeAdapter(
+	private val onItemClick: (Int) -> Unit
+) : ListAdapter<RestaurantSummary, HomeAdapter.ViewHolder>(RestaurantSummaryCallback) {
 
-	class ViewHolder(private val binding: ItemSaltitPickRestaurantBinding) : RecyclerView.ViewHolder(binding.root) {
+	inner class ViewHolder(private val binding: ItemSaltitPickRestaurantBinding) : RecyclerView.ViewHolder(binding.root) {
 		fun bind(item: RestaurantSummary) {
 			binding.item = item
+			binding.setClickListener {
+				onItemClick(item.restaurantId)
+			}
 		}
 	}
 

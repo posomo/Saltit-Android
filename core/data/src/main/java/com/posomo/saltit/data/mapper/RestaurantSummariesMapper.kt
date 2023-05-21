@@ -8,13 +8,17 @@ object RestaurantSummariesMapper : ObjectMapper<List<RestaurantSummary>, List<Re
 	override fun asDomain(data: List<RestaurantSummaryDto>): List<RestaurantSummary> {
 		return data.map {
 			RestaurantSummary(
+				restaurantId = it.restaurantId,
 				titleImageUrl = it.titleImageUrl,
 				restaurantName = it.restaurantName,
-				rating = it.rating,
+				rating = String.format("%.1f", it.rating.toDouble() / 20),
 				mainMenuName = it.mainMenuName,
 				categoryName = it.categoryName,
 				mainMenuPrice = it.mainMenuPrice,
-				distance = "${it.distance}m"
+				distance = "${it.distance}m",
+				menuSize = "${it.menuSize}",
+				longitude = it.longitude,
+				latitude = it.latitude,
 			)
 		}
 	}
@@ -22,13 +26,17 @@ object RestaurantSummariesMapper : ObjectMapper<List<RestaurantSummary>, List<Re
 	override fun asData(domain: List<RestaurantSummary>): List<RestaurantSummaryDto> {
 		return domain.map {
 			RestaurantSummaryDto(
+				restaurantId = it.restaurantId,
 				titleImageUrl = it.titleImageUrl,
 				restaurantName = it.restaurantName,
-				rating = it.rating,
+				rating = (it.rating.toDouble() * 20).toInt(),
 				mainMenuName = it.mainMenuName,
 				categoryName = it.categoryName,
 				mainMenuPrice = it.mainMenuPrice,
-				distance = it.distance.substring(0, it.distance.length-1).toDouble()
+				distance = it.distance.substring(0, it.distance.length-1).toDouble(),
+				menuSize = it.menuSize.toInt(),
+				longitude = it.longitude,
+				latitude = it.latitude
 			)
 		}
 	}

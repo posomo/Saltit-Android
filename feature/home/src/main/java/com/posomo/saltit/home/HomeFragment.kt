@@ -11,32 +11,38 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
-	private val viewModel by viewModels<HomeViewModel>()
-	private val homeAdapter by lazy { HomeAdapter() }
+    private val viewModel by viewModels<HomeViewModel>()
+    private val homeAdapter by lazy {
+        HomeAdapter(
+            onItemClick = {restaurantId: Int ->
+                (requireActivity() as ActivityUtil).navigateToPlaceInfoFragment(restaurantId)
+            }
+        )
+    }
 
-	override fun initView() {
+    override fun initView() {
 
-		bind {
-			adapter = homeAdapter
-			itemDecoration = SpacingItemDecoration(spacing = 40)
-		}
+        bind {
+            adapter = homeAdapter
+            itemDecoration = SpacingItemDecoration(spacing = 40)
+        }
 
-		subscribeUI()
+        subscribeUI()
 
-		// StatusBar 색상 변경
-		(activity as ActivityUtil).changeStatusBarColor(
-			ContextCompat.getColor(
-				requireContext(),
-				com.posomo.saltit.common_ui.R.color.saltit_blue_background1
-			)
-		)
-	}
+        // StatusBar 색상 변경
+        (activity as ActivityUtil).changeStatusBarColor(
+            ContextCompat.getColor(
+                requireContext(),
+                com.posomo.saltit.common_ui.R.color.saltit_blue_background1
+            )
+        )
+    }
 
-	private fun subscribeUI() {
-		viewModel.restaurantSummaries.observe(viewLifecycleOwner) {
-			homeAdapter.submitList(it) {
-				binding.homeRv.requestLayout()
-			}
-		}
-	}
+    private fun subscribeUI() {
+        viewModel.restaurantSummaries.observe(viewLifecycleOwner) {
+            homeAdapter.submitList(it) {
+                binding.homeRv.requestLayout()
+            }
+        }
+    }
 }

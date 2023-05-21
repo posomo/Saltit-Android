@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text.Title03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="이런 메뉴도 있어요!"
+            android:textColor="@color/saltit_blue_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

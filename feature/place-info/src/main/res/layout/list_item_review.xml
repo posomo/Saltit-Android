@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="50dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text.Title03"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="가게 리뷰보기"
+            android:textColor="@color/saltit_blue_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/decorTop"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_marginTop="30dp"
+            android:background="@color/saltit_gray_02"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <LinearLayout
+            android:id="@+id/llReview"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/decorTop">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#D9D9D9"/>
+
+            <TextView
+                android:id="@+id/tvReviewItem"
+                style="@style/Text.Body01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="@string/go_dinning_code"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/decorBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:background="@color/saltit_gray_02"
+            app:layout_constraintTop_toBottomOf="@id/llReview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

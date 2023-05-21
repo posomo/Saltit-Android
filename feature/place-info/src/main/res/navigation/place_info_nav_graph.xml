@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/place_info_nav_graph"
+    app:startDestination="@id/placeInfoFragment">
+
+    <fragment
+        android:id="@+id/placeInfoFragment"
+        android:name="com.posomo.saltit.place_info.PlaceInfoFragment"
+        android:label="fragment_place_info"
+        tools:layout="@layout/fragment_place_info" />
+</navigation>

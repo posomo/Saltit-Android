@@ -4,6 +4,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.annotation.WorkerThread
 import com.posomo.saltit.data.mapper.asDomain
 import com.posomo.saltit.model.*
+import com.posomo.saltit.model.domain.RestaurantDetail
 import com.posomo.saltit.model.request.RestaurantSummaryRequest
 import com.posomo.saltit.network.Dispatcher
 import com.posomo.saltit.network.SaltitAppDispatchers
@@ -32,6 +33,21 @@ class SaltitRepositoryImpl @Inject constructor(
             emit(data.restaurantSummaries.asDomain())
         }.onError {
             map(ErrorResponseMapper) { onError("[Code: $code]: $message") }
+        }.onException { onException { onError(message) } }
+    }.onStart { onStart() }.onCompletion { onComplete() }.flowOn(ioDispatcher)
+
+    @WorkerThread
+    override fun getRestaurantDetailData(
+        restaurantId: Int,
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
+        onError: (String?) -> Unit
+    ) = flow {
+        val response = saltitService.fetchRestaurantDetail(restaurantId)
+        response.suspendOnSuccess {
+            emit(data.asDomain())
+        }.onError {
+            map(ErrorResponseMapper) { onError("[Error Code: $code]: $message") }
         }.onException { onException { onError(message) } }
     }.onStart { onStart() }.onCompletion { onComplete() }.flowOn(ioDispatcher)
 }

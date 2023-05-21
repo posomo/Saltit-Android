@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
         navController.navigate(R.id.action_home_to_login)
     }
 
+    override fun navigateToPlaceInfoFragment(id: Int) {
+        binding.saltitBottomNav.visibility = View.GONE
+        navController.navigate(R.id.action_home_to_place_info)
+    }
+
     override fun changeStatusBarColor(color: Int) {
         window.statusBarColor = color
     }

@@ -1,0 +1,8 @@
+<resources>
+    <string name="budget_menu_helper">오늘 점심 식비에 맞는 메뉴들을 추천해드립니다.</string>
+    <string name="budget_menu_saving_helper">오늘 예산보다 %s 원 절약</string>
+    <string name="no_menu_title">앗! 예산에 맞는 메뉴가 없어요</string>
+    <string name="no_menu_subtitle">예산을 조절해볼까요?</string>
+    <string name="set_today_budget">오늘 예산 조절하기</string>
+    <string name="go_dinning_code">다이닝코드에서 보기</string>
+</resources>

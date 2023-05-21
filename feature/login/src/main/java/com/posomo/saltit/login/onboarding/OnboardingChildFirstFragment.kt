@@ -46,9 +46,11 @@ class OnboardingChildFirstFragment : BaseFragment<FragmentOnboardingChildFirstBi
             userOldLunchPrice /= 1000
             userOldLunchPrice *= 1000
 
-            (activity as ActivityUtil).setUserCurrentAvgLunchPriceInLocal(userOldLunchPrice)
+            if(userOldLunchPrice != 0 ) {
+                (activity as ActivityUtil).setUserCurrentAvgLunchPriceInLocal(userOldLunchPrice)
 
-            viewPager?.currentItem = 1
+                viewPager?.currentItem = 1
+            }
         }
 
         binding.onboardingUserLunchPriceSeekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{

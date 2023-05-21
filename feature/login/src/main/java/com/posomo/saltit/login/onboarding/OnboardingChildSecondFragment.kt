@@ -29,7 +29,6 @@ class OnboardingChildSecondFragment : BaseFragment<FragmentOnboardingChildSecond
             )
         )
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
         val textResourceId = R.string.onboarding2_question_text_head
         val textData: String = getString(textResourceId)
         val builder = SpannableStringBuilder(textData)
@@ -48,10 +47,11 @@ class OnboardingChildSecondFragment : BaseFragment<FragmentOnboardingChildSecond
             userTargetLunchPrice /= 1000
             userTargetLunchPrice *= 1000
 
-            (activity as ActivityUtil).setUserIdealAvgLunchPriceInLocal(userTargetLunchPrice)
+            if(userTargetLunchPrice != 0) {
+                (activity as ActivityUtil).setUserIdealAvgLunchPriceInLocal(userTargetLunchPrice)
 
-            //viewPager?.currentItem = 2
-            findNavController().navigate(R.id.action_onboardingFragment_to_loginFragment)
+                findNavController().navigate(R.id.action_onboardingFragment_to_loginFragment)
+            }
         }
 
         binding.onboarding2UserLunchPriceSeekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {

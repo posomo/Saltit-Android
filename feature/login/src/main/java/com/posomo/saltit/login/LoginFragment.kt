@@ -24,11 +24,14 @@ class LoginFragment : BaseFragment<FragmentOnboardingChildThirdBinding>(R.layout
         val userIdealAvgLunchPrice = (activity as ActivityUtil).getUserIdealAvgLunchPriceInLocal(0)
         val userSavingLunchPrice = ((userCurrentAvgLunchPrice - userIdealAvgLunchPrice)*30).toString()
 
-        if(userSavingLunchPrice.length ==5 ) {
+        if(userSavingLunchPrice.length == 5 ) {
             binding.onboarding3MonthlySavingMoney.text = userSavingLunchPrice.substring(0,2) + ",000"
         }
-        else {
+        else if(userSavingLunchPrice.length == 6) {
             binding.onboarding3MonthlySavingMoney.text = userSavingLunchPrice.substring(0,3) + ",000"
+        }
+        else {
+            binding.onboarding3MonthlySavingMoney.text = "15,000"
         }
 
         binding.loginBtn.setOnClickListener {

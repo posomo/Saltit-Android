@@ -8,8 +8,8 @@
         <import type="android.view.View" />
 
         <variable
-            name="model"
-            type="com.posomo.saltit.model.domain.RestaurantDetail" />
+            name="count"
+            type="Integer" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text='@{model.mainMenuCount + "개"}'
+            android:text='@{count + "개"}'
             app:layout_constraintBottom_toBottomOf="@id/tvTitle"
             app:layout_constraintStart_toEndOf="@id/tvTitle"
             app:layout_constraintTop_toTopOf="@id/tvTitle"
@@ -49,7 +49,7 @@
             android:text="@string/budget_menu_helper"
             android:textColor="@color/saltit_gray_01"
             android:textSize="14sp"
-            android:visibility="@{model.mainMenuCount > 0 ? View.VISIBLE : View.GONE}"
+            android:visibility="@{count > 0 ? View.VISIBLE : View.GONE}"
             app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
@@ -57,7 +57,7 @@
             android:id="@+id/groupNoMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{model.mainMenuCount == 0 ? View.VISIBLE : View.GONE}"
+            android:visibility="@{count == 0 ? View.VISIBLE : View.GONE}"
             app:constraint_referenced_ids="tvNoMenuTitle, tvNoMenuSubtitle, tvSetBudget" />
 
         <TextView

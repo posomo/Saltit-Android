@@ -44,7 +44,7 @@
 
         <TextView
             android:id="@+id/tvMenuPrice"
-            style="@style/Text.Title02"
+            style="@style/Text.Title09"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

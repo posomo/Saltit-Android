@@ -13,5 +13,6 @@ data class RestaurantDetailResponse(
     @SerializedName("address") val address: String,
     @SerializedName("categories") val categories: List<String>,
     @SerializedName("main") val main: MainSideDto,
-    @SerializedName("side") val side: MainSideDto
+    @SerializedName("side") val side: MainSideDto,
+    @SerializedName("titleImageUrl") val titleImageUrl: String
 )

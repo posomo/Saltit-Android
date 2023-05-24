@@ -7,8 +7,12 @@
     <data>
 
         <variable
-            name="model"
-            type="com.posomo.saltit.model.domain.RestaurantSummary" />
+            name="adapter"
+            type="com.posomo.saltit.place_info.PlaceInfoAdapter" />
+
+        <variable
+            name="vm"
+            type="com.posomo.saltit.place_info.PlaceInfoViewModel" />
 
         <variable
             name="homeClickEvent"
@@ -51,7 +55,7 @@
                 style="@style/Text.SubHead04"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{model.restaurantName}"
+                android:text="@{vm.restaurantDetail.name}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvHome"
                 app:layout_constraintStart_toEndOf="@id/ivBack"
@@ -59,7 +63,7 @@
 
             <TextView
                 android:id="@+id/tvHome"
-                style="@style/Text.Title06"
+                style="@style/Text.SubHead08"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
@@ -95,7 +99,48 @@
             android:id="@+id/rvPlaceInfo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:adapter="@{adapter}"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSetBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_set_budget_floating"
+            android:drawableStart="@drawable/ic_pig"
+            android:drawablePadding="5dp"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:text="예산조절"
+            android:textColor="@color/saltit_gray_02"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnScrollUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_set_budget_floating"
+            android:drawableStart="@drawable/ic_scroll_up"
+            android:elevation="4dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="13dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintVertical_bias="1" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

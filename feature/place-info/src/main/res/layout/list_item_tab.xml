@@ -5,8 +5,14 @@
 
     <data>
         <variable
-            name="isSelected"
-            type="boolean" />
+            name="selectedItem"
+            type="Integer" />
+        <variable
+            name="menuClickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="infoClickListener"
+            type="android.view.View.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +26,7 @@
             android:gravity="center"
             android:text="메뉴"
             android:textSize="18sp"
-            app:focusedBackground="@{isSelected}"
+            app:focusedBackground="@{selectedItem == 0}"
             app:layout_constraintEnd_toStartOf="@id/tvInfoTab"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -31,7 +37,7 @@
             android:gravity="center"
             android:text="가게정보"
             android:textSize="18sp"
-            app:focusedBackground="@{isSelected}"
+            app:focusedBackground="@{selectedItem == 1}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvMenuTab" />
 

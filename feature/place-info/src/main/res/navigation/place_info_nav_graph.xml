@@ -9,5 +9,20 @@
         android:id="@+id/placeInfoFragment"
         android:name="com.posomo.saltit.place_info.PlaceInfoFragment"
         android:label="fragment_place_info"
-        tools:layout="@layout/fragment_place_info" />
+        tools:layout="@layout/fragment_place_info" >
+        <argument
+            android:name="restaurantId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_placeInfoFragment_to_commonWebViewActivity"
+            app:destination="@id/commonWebViewActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/commonWebViewActivity"
+        android:name="com.posomo.saltit.place_info.CommonWebViewActivity"
+        android:label="CommonWebViewActivity" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </activity>
 </navigation>

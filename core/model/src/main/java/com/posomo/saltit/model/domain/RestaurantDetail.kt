@@ -14,5 +14,6 @@ data class RestaurantDetail(
     val mainMenuCount: Int,
     val mainMenuList: List<MenuDto>,
     val sideMenuCount: Int,
-    val sideMenuList: List<MenuDto>
+    val sideMenuList: List<MenuDto>,
+    val titleImageUrl: String
 )

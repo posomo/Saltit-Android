@@ -18,7 +18,8 @@ object RestaurantDetailMapper: ObjectMapper<RestaurantDetail, RestaurantDetailRe
             mainMenuCount = data.main.count,
             mainMenuList = data.main.menus,
             sideMenuCount = data.side.count,
-            sideMenuList = data.side.menus
+            sideMenuList = data.side.menus,
+            titleImageUrl = data.titleImageUrl
         )
     }
 
@@ -33,7 +34,8 @@ object RestaurantDetailMapper: ObjectMapper<RestaurantDetail, RestaurantDetailRe
             address = domain.address,
             categories = domain.categories.split(", "),
             main = MainSideDto(count = domain.mainMenuCount, menus = domain.mainMenuList),
-            side = MainSideDto(count = domain.sideMenuCount, menus = domain.sideMenuList)
+            side = MainSideDto(count = domain.sideMenuCount, menus = domain.sideMenuList),
+            titleImageUrl = domain.titleImageUrl
         )
     }
 }

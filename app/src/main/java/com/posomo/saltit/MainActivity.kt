@@ -4,6 +4,7 @@ import com.posomo.saltit.domain.util.PreferenceUtil
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity(), ActivityUtil {
 
     override fun navigateToPlaceInfoFragment(id: Int) {
         binding.saltitBottomNav.visibility = View.GONE
-        navController.navigate(R.id.action_home_to_place_info)
+        navController.navigate(R.id.action_home_to_place_info, bundleOf("restaurantId" to id))
     }
 
     override fun changeStatusBarColor(color: Int) {

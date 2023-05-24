@@ -5,7 +5,7 @@ data class RestaurantSummary(
 	val titleImageUrl: String,
 	val restaurantName: String,
 	val rating: String,
-	val mainMenuPrice: Int,
+	val mainMenuPrice: String,
 	val mainMenuName: String,
 	val categoryName: String,
 	val menuSize: String,

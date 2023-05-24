@@ -2,6 +2,7 @@ package com.posomo.saltit.data.mapper
 
 import com.posomo.saltit.model.domain.RestaurantSummary
 import com.posomo.saltit.model.dto.RestaurantSummaryDto
+import kotlin.math.roundToInt
 
 object RestaurantSummariesMapper : ObjectMapper<List<RestaurantSummary>, List<RestaurantSummaryDto>> {
 
@@ -14,9 +15,9 @@ object RestaurantSummariesMapper : ObjectMapper<List<RestaurantSummary>, List<Re
 				rating = String.format("%.1f", it.rating.toDouble() / 20),
 				mainMenuName = it.mainMenuName,
 				categoryName = it.categoryName,
-				mainMenuPrice = it.mainMenuPrice,
-				distance = "${it.distance}m",
-				menuSize = "${it.menuSize}",
+				mainMenuPrice = "${it.mainMenuPrice}원",
+				distance = "${(it.distance).roundToInt()}m",
+				menuSize = "${it.menuSize}개",
 				longitude = it.longitude,
 				latitude = it.latitude,
 			)
@@ -32,7 +33,7 @@ object RestaurantSummariesMapper : ObjectMapper<List<RestaurantSummary>, List<Re
 				rating = (it.rating.toDouble() * 20).toInt(),
 				mainMenuName = it.mainMenuName,
 				categoryName = it.categoryName,
-				mainMenuPrice = it.mainMenuPrice,
+				mainMenuPrice = it.mainMenuPrice.toInt(),
 				distance = it.distance.substring(0, it.distance.length-1).toDouble(),
 				menuSize = it.menuSize.toInt(),
 				longitude = it.longitude,

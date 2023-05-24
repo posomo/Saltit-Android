@@ -1,3 +1,5 @@
 <resources>
     <string name="hello_blank_home_fragment">Hello Home fragment</string>
+    <string name="home_user_saltit_plan_user_target_lunchPrice_text">10,000</string>
+    <string name="item_pick_restaurant_dist">452m</string>
 </resources>

@@ -12,12 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="24dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="30dp">
+        android:paddingTop="50dp">
 
         <TextView
             android:id="@+id/tvTitle"
-            style="@style/Text.Title03"
+            style="@style/Text.Title09"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{title}"

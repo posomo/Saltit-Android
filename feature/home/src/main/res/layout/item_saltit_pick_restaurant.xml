@@ -41,10 +41,10 @@
 
         <TextView
             android:id="@+id/item_pick_restaurant_name"
-            style="@style/Text.Title02"
+            style="@style/Text.Title09"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="14dp"
             android:text="@{item.restaurantName}"
             app:layout_constraintStart_toStartOf="@id/item_pick_restaurant_image_area"
             app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_image_area"
@@ -52,10 +52,11 @@
 
         <TextView
             android:id="@+id/item_pick_restaurant_type"
-            style="@style/Text.SubHead04"
+            style="@style/Text.SubHead08"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
             android:text="@{item.categoryName}"
             app:layout_constraintBaseline_toBaselineOf="@id/item_pick_restaurant_name"
             app:layout_constraintStart_toEndOf="@id/item_pick_restaurant_name"
@@ -63,16 +64,16 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/item_pick_restaurant_star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/ic_star_orange"
             app:layout_constraintStart_toStartOf="@id/item_pick_restaurant_name"
             app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_name" />
 
         <TextView
             android:id="@+id/item_pick_restaurant_rate"
-            style="@style/Text.SubHead03"
+            style="@style/Text.SubHead07"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -96,7 +97,7 @@
 
         <TextView
             android:id="@+id/item_pick_restaurant_dist"
-            style="@style/Text.SubHead03"
+            style="@style/Text.SubHead07"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -132,18 +133,19 @@
             app:layout_constraintTop_toTopOf="@id/item_pick_restaurant_dist">
 
             <TextView
-                style="@style/Text.SubHead03"
+                style="@style/Text.SubHead08"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="예산 내 메뉴"
                 android:textColor="@color/saltit_blue_text" />
 
             <TextView
-                style="@style/Text.Title04"
+                style="@style/Text.Title12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="5개"
+                android:text="@{item.menuSize}"
+                tools:text="5개"
                 android:textColor="@color/saltit_blue_text" />
 
         </LinearLayout>
@@ -151,7 +153,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/bg_saltit_light_gray3_round"
             android:orientation="horizontal"
             android:paddingHorizontal="6dp"
@@ -160,16 +162,20 @@
             app:layout_constraintTop_toBottomOf="@id/item_pick_restaurant_star">
 
             <TextView
+                style="@style/Text.SubHead07"
+                android:textColor="@color/saltit_gray_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="생선구이 정식" />
+                android:text="@{item.mainMenuName}"
+                tools:text="생선구이 정식" />
 
             <TextView
-                style="@style/Text.Title04"
+                style="@style/Text.Title11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="9,500원"
+                android:text="@{item.mainMenuPrice}"
+                tools:text="9,500원"
                 android:textColor="@color/saltit_gray_02" />
 
         </LinearLayout>

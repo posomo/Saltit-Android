@@ -16,7 +16,7 @@
 
         <TextView
             android:id="@+id/tvTile"
-            style="@style/Text.SubHead02"
+            style="@style/Text.SubHead05"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"

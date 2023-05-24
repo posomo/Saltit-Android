@@ -23,13 +23,12 @@
             android:id="@+id/home_appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/saltit_blue_background1"
+            android:background="@color/saltit_light_gray_03"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
                 android:fitsSystemWindows="true"
                 app:contentScrim="@android:color/transparent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -38,7 +37,9 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@color/saltit_light_gray_03"
+                    android:layout_marginBottom="12dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/home_appbar_search_layout"
@@ -46,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/saltit_blue_background1"
                         android:paddingTop="30dp"
-                        android:paddingBottom="20dp"
+                        android:paddingBottom="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -55,7 +56,7 @@
                             android:id="@+id/home_appbar_logo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
+                            android:layout_marginStart="18dp"
                             android:src="@drawable/ic_simbol_white"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +65,7 @@
                             android:id="@+id/home_appbar_locate_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="10dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             app:layout_constraintStart_toEndOf="@id/home_appbar_logo"
@@ -72,7 +73,7 @@
 
                             <TextView
                                 android:id="@+id/home_appbar_locate_text"
-                                style="@style/Text.Title02"
+                                style="@style/Text.Title09"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="합정동"
@@ -82,7 +83,7 @@
                                 android:id="@+id/home_appbar_locate_down_icon"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
+                                android:layout_marginStart="9dp"
                                 android:src="@drawable/ic_triangle_down"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -93,8 +94,8 @@
                             android:id="@+id/home_appbar_search"
                             android:layout_width="0dp"
                             android:layout_height="50dp"
-                            android:layout_marginHorizontal="24dp"
-                            android:layout_marginTop="18dp"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="12dp"
                             android:background="@drawable/home_search_header_border"
                             android:backgroundTint="@color/white"
                             android:drawableStart="@drawable/home_search_icon"
@@ -102,7 +103,7 @@
                             android:gravity="center_vertical"
                             android:hint="음식 또는 식당명을 검색해보세요"
                             android:paddingHorizontal="16dp"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/home_appbar_logo" />
@@ -111,7 +112,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="240dp"
+                        android:layout_height="188dp"
                         android:layout_margin="12dp"
                         android:background="@color/white"
                         android:elevation="1dp"
@@ -121,14 +122,14 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/home_user_saltit_plan_layout"
                             android:layout_width="match_parent"
-                            android:layout_height="240dp">
+                            android:layout_height="wrap_content">
 
                             <TextView
                                 android:id="@+id/home_user_saltit_plan_title"
-                                style="@style/Text.Title02"
+                                style="@style/Text.SubHead05"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="39dp"
+                                android:layout_marginTop="30dp"
                                 android:text="목표 점심예산"
                                 android:textColor="@color/black"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -142,31 +143,57 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="6dp"
                                 android:text="짭짤한 점심시간을 시작해볼까요?"
+                                android:textColor="@color/saltit_gray_01"
                                 app:layout_constraintEnd_toEndOf="@id/home_user_saltit_plan_title"
                                 app:layout_constraintStart_toStartOf="@id/home_user_saltit_plan_title"
                                 app:layout_constraintTop_toBottomOf="@id/home_user_saltit_plan_title" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="1만원"
-                                android:textColor="@color/saltit_blue_text"
-                                android:textSize="36sp"
-                                android:textStyle="bold"
+                            <LinearLayout
+                                android:id="@+id/home_user_saltit_plan_user_target_lunchPrice_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="16dp"
                                 app:layout_constraintBottom_toTopOf="@id/home_user_saltit_plan_modify_text"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/home_user_saltit_plan_sub_text" />
+                                app:layout_constraintTop_toBottomOf="@id/home_user_saltit_plan_sub_text">
 
-                            <TextView
+                                <TextView
+                                    android:id="@+id/home_user_saltit_plan_user_target_lunchPrice_text"
+                                    style="@style/Text.Title03"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10,000"
+                                    android:textColor="@color/saltit_blue_text" />
+
+                                <TextView
+                                    style="@style/Text.Title03"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="원"
+                                    android:textColor="@color/saltit_blue_text"
+                                    app:layout_constraintStart_toEndOf="@id/home_user_saltit_plan_user_target_lunchPrice_text" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                style="@style/Text.Body03"
                                 android:id="@+id/home_user_saltit_plan_modify_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="37dp"
+                                android:layout_marginTop="20dp"
                                 android:text="수정하기"
+                                android:background="@android:color/transparent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:foreground="?android:attr/selectableItemBackground"
                                 android:textColor="@color/saltit_gray_02"
-                                app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/home_user_saltit_plan_user_target_lunchPrice_layout"
                                 app:layout_constraintStart_toStartOf="parent" />
 
                             <androidx.constraintlayout.widget.Guideline
@@ -174,21 +201,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                app:layout_constraintGuide_percent="0.25" />
+                                app:layout_constraintGuide_percent="0.21" />
 
                             <androidx.constraintlayout.widget.Guideline
                                 android:id="@+id/home_user_saltit_plan_lighty_top_gl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                app:layout_constraintGuide_percent="0.5" />
+                                app:layout_constraintGuide_percent="0.45" />
 
                             <androidx.constraintlayout.widget.Guideline
                                 android:id="@+id/home_user_saltit_plan_lighty_btm_gl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                app:layout_constraintGuide_percent="0.89" />
+                                app:layout_constraintGuide_percent="0.94" />
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
@@ -205,21 +232,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                app:layout_constraintGuide_percent="0.475" />
+                                app:layout_constraintGuide_percent="0.477" />
 
                             <androidx.constraintlayout.widget.Guideline
                                 android:id="@+id/home_user_saltit_plan_salty_btm_gl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                app:layout_constraintGuide_percent="0.85" />
+                                app:layout_constraintGuide_percent="0.99" />
 
                             <androidx.constraintlayout.widget.Guideline
                                 android:id="@+id/home_user_saltit_plan_salty_start_gl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                app:layout_constraintGuide_percent="0.75" />
+                                app:layout_constraintGuide_percent="0.78" />
 
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:layout_width="0dp"
@@ -246,16 +273,17 @@
                 app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/home_sticky_header_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:paddingHorizontal="24dp"
-                    android:paddingTop="40dp"
+                    android:paddingHorizontal="18dp"
+                    android:paddingTop="30dp"
                     android:paddingBottom="20dp">
 
                     <TextView
                         android:id="@+id/home_sticky_header_text_color"
-                        style="@style/Text.Title02"
+                        style="@style/Text.Title09"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="솔팃"
@@ -265,7 +293,7 @@
 
                     <TextView
                         android:id="@+id/home_sticky_header_text"
-                        style="@style/Text.Title02"
+                        style="@style/Text.Title09"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
@@ -276,18 +304,18 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/filter_button"
-                        style="@style/Text.SubHead03"
+                        style="@style/Text.SubHead08"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/gray_round_filter_button"
                         android:clickable="true"
                         android:drawableStart="@drawable/ic_filter_fill_white"
-                        android:drawablePadding="10dp"
+                        android:drawablePadding="8dp"
                         android:focusable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:minWidth="0dp"
                         android:minHeight="0dp"
-                        android:paddingHorizontal="14dp"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="10dp"
                         android:paddingVertical="6dp"
                         android:text="필터"
                         android:textColor="@color/saltit_gray_01"
@@ -296,42 +324,49 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/price_filter_button"
-                        style="@style/Text.SubHead03"
+                        style="@style/Text.SubHead07"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30dp"
                         android:background="@drawable/gray_round_filter_button"
                         android:clickable="true"
                         android:drawableEnd="@drawable/img_price_filter_icon"
                         android:drawablePadding="10dp"
                         android:focusable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:minWidth="0dp"
                         android:minHeight="0dp"
                         android:text="오늘 예산 설정하기"
                         android:textColor="@color/saltit_gray_01"
-                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:paddingVertical="4dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/home_sticky_header_text_color" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/price_reset_button"
-                        android:layout_width="48dp"
-                        android:layout_height="36dp"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="8dp"
                         android:background="@drawable/gray_round_filter_button"
                         android:clickable="true"
                         android:drawableEnd="@drawable/img_price_reset_icon"
                         android:focusable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="9dp"
+                        android:layout_marginTop="10dp"
                         app:layout_constraintBottom_toBottomOf="@id/price_filter_button"
                         app:layout_constraintStart_toEndOf="@id/price_filter_button"
-                        app:layout_constraintTop_toTopOf="@id/price_filter_button" />
+                        app:layout_constraintTop_toBottomOf="@id/home_sticky_header_text_color" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/saltit_light_gray_02"
+                app:layout_constraintTop_toBottomOf="@id/home_sticky_header_layout"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -339,8 +374,8 @@
             android:id="@+id/home_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
             android:adapter="@{adapter}"
             android:orientation="vertical"
             app:itemDecoration="@{itemDecoration}"

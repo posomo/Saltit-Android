@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="24dp"
-        android:paddingVertical="50dp">
+        android:paddingVertical="40dp">
 
         <TextView
             android:id="@+id/tvTitle"
-            style="@style/Text.Title03"
+            style="@style/Text.Title09"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="가게 리뷰보기"
@@ -28,14 +28,14 @@
             android:id="@+id/decorTop"
             android:layout_width="match_parent"
             android:layout_height="0.5px"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@color/saltit_gray_02"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
         <LinearLayout
             android:id="@+id/llReview"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="48dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:clickable="true"
@@ -50,11 +50,11 @@
 
             <TextView
                 android:id="@+id/tvReviewItem"
-                style="@style/Text.Body01"
+                style="@style/Text.SubHead05"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="16dp"
                 android:layout_marginStart="14dp"
-                android:text="@string/go_dinning_code"/>
+                android:text="@string/go_dinning_code" />
         </LinearLayout>
 
         <View

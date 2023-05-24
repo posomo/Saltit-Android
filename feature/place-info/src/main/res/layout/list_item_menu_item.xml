@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/tvMenuName"
-            style="@style/Text.SubHead04"
+            style="@style/Text.SubHead07"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"

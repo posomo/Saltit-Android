@@ -43,6 +43,9 @@ dependencies {
     // coroutines
     implementation(Dependencies.kotlin.coroutine)
 
+    // Database
+    implementation(Dependencies.database.datastore)
+
     // di
     implementation(Dependencies.hilt.android)
     kapt(Dependencies.hilt.compiler)

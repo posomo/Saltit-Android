@@ -8,7 +8,8 @@ object Dependencies {
     val retrofit = Retrofit()
     val okHttp = OkHttp()
     val kotlinx = KotlinX
-    
+
+    val database = Database
     val jsonParser = JsonParser
     val network = Network
     val imageLoader = ImageLoader
@@ -62,6 +63,10 @@ object Dependencies {
         val serialization by lazy { "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlinxJVM}" }
         val json by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinx}" }
         val protobuf by lazy { "org.jetbrains.kotlinx:kotlinx-serialization-protobuf:${Versions.kotlinx}" }
+    }
+
+    object Database {
+        val datastore by lazy { "androidx.datastore:datastore-preferences:${Versions.datastore}" }
     }
 
     object Network {

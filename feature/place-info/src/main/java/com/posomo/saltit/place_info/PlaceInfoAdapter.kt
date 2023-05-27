@@ -2,7 +2,6 @@ package com.posomo.saltit.place_info
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.posomo.saltit.domain.util.PreferenceUtil
 import com.posomo.saltit.place_info.databinding.ListItemDecorGrayBinding
 import com.posomo.saltit.place_info.databinding.ListItemFooterBinding
 import com.posomo.saltit.place_info.databinding.ListItemHeaderBinding
@@ -32,7 +30,6 @@ class PlaceInfoAdapter : ListAdapter<PlaceInfoListItem, RecyclerView.ViewHolder>
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
         context = recyclerView.context
-        userBudget = PreferenceUtil(context).getUserIdealAvgLunchPrice(0)
     }
 
     override fun getItemViewType(position: Int): Int = currentList[position].viewType

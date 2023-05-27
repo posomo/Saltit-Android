@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -13,42 +12,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.75"/>
+            app:layout_constraintGuide_percent="0.75" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_lighty150_top_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.08"/>
+            app:layout_constraintGuide_percent="0.08" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_lighty150_btm_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.28"/>
+            app:layout_constraintGuide_percent="0.28" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_lighty30_end_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25"/>
+            app:layout_constraintGuide_percent="0.25" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_lighty30_top_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.53"/>
+            app:layout_constraintGuide_percent="0.53" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_lighty30_btm_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.72"/>
+            app:layout_constraintGuide_percent="0.72" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
@@ -74,119 +73,99 @@
             android:id="@+id/onboarding_question_text_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:bufferType="spannable"
-            android:text="하루 점심값으로"
             android:layout_marginTop="47dp"
-            android:textStyle="normal"
-            android:textSize="28sp"
-            android:textColor="@color/saltit_gray_01"
+            android:bufferType="spannable"
             android:fontFamily="@font/saltit_font_family_medium"
-            app:layout_constraintTop_toTopOf="@+id/onboarding_lighty150_btm_gl"
+            android:text="@string/onboarding_first_head_text"
+            android:textColor="@color/saltit_gray_01"
+            android:textSize="28sp"
+            android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/onboarding_lighty150_btm_gl" />
 
         <TextView
             android:id="@+id/onboarding_question_text_subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="얼마 정도 쓰고 계신가요?"
             android:layout_marginTop="47dp"
-            android:textStyle="normal"
-            android:textSize="28sp"
-            android:textColor="@color/saltit_gray_01"
             android:fontFamily="@font/saltit_font_family_medium"
-            app:layout_constraintTop_toTopOf="@+id/onboarding_question_text_head"
+            android:text="@string/onboarding_first_subhead_text"
+            android:textColor="@color/saltit_gray_01"
+            android:textSize="28sp"
+            android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/onboarding_question_text_head" />
 
-        <LinearLayout
-            android:id="@+id/onboarding_user_lunch_price_layout"
+
+        <TextView
+            android:id="@+id/onboarding_user_lunch_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="24dp"
+            android:fontFamily="@font/saltit_font_family"
             android:gravity="center"
+            android:text="@string/onboarding_user_lunch_price"
+            android:textColor="@color/saltit_sub_orange_Text"
+            android:textSize="36sp"
+            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/onboarding_question_text_subhead"
-            app:layout_constraintStart_toStartOf="parent">
-
-
-            <TextView
-                android:id="@+id/onboarding_user_lunch_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="10,000"
-                android:textStyle="bold"
-                android:textSize="36sp"
-                android:textColor="@color/saltit_sub_orange_Text"
-                android:fontFamily="@font/saltit_font_family"
-                />
-
-            <TextView
-                android:id="@+id/onboarding_user_lunch_won"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="원"
-                android:textStyle="bold"
-                android:textSize="36sp"
-                android:textColor="@color/saltit_sub_orange_Text"
-                android:fontFamily="@font/saltit_font_family"/>
-
-        </LinearLayout>
+            tools:text="10,000원" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_seekbar_top_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.81"/>
+            app:layout_constraintGuide_percent="0.81" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_seekbar_start_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.13"/>
+            app:layout_constraintGuide_percent="0.13" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/onboarding_seekbar_end_gl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.87"/>
+            app:layout_constraintGuide_percent="0.87" />
 
         <SeekBar
             android:id="@+id/onboarding_user_lunch_price_seekbar"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:max="20000"
-            android:min="4000"
+            android:max="20"
             android:maxHeight="4dp"
+            android:min="4"
             android:minHeight="4dp"
-            android:progress="10000"
-            android:translationX="-4dp"
+            android:progress="10"
             android:progressDrawable="@drawable/onboarding_seekbar"
             android:splitTrack="false"
             android:thumb="@drawable/onboarding_seekbar_thumb"
-            app:layout_constraintTop_toBottomOf="@+id/onboarding_seekbar_top_gl"
+            android:translationX="-4dp"
+            app:layout_constraintEnd_toStartOf="@+id/onboarding_seekbar_end_gl"
             app:layout_constraintStart_toStartOf="@+id/onboarding_seekbar_start_gl"
-            app:layout_constraintEnd_toStartOf="@+id/onboarding_seekbar_end_gl"/>
+            app:layout_constraintTop_toBottomOf="@+id/onboarding_seekbar_top_gl" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/onboarding_seekbar_explain_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/onboarding_seekbar_explain_arrow"
             android:drawablePadding="2dp"
-            android:text="원을 움직여 보세요"
+            android:text="@string/onboarding_first_seekbar_explain_text"
             android:textColor="@color/saltit_gray_02"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.127"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txt_next"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/onboarding_user_lunch_price_seekbar" />
 
         <Button
@@ -194,15 +173,15 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
             android:layout_marginTop="40dp"
-            android:text="다음"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/saltit_font_family"
+            android:layout_marginRight="12dp"
             android:background="@drawable/onboarding_next_btn_background"
-            app:layout_constraintTop_toBottomOf="@+id/onboarding_user_lunch_price_seekbar"/>
+            android:fontFamily="@font/saltit_font_family"
+            android:text="@string/onboarding_first_btn_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/onboarding_user_lunch_price_seekbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

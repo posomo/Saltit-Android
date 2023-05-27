@@ -17,19 +17,24 @@
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+
         <action
             android:id="@+id/action_splashFragment_to_onboardingChildFirstFragment"
-            app:destination="@id/onboardingChildFirstFragment" />
+            app:destination="@id/onboardingChildFirstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpToInclusive="true" />
 
     </fragment>
 
     <fragment
         android:id="@+id/onboardingChildFirstFragment"
-        android:name="com.posomo.saltit.login.onboarding.OnboardingChildFirstFragment"
+        android:name="com.posomo.saltit.login.onboarding.OnboardingFirstFragment"
         android:label="OnboardingChildFirstFragment">
         <action
-            android:id="@+id/action_onboardingChildFirstFragment_to_onboardingChildSecondFragment2"
+            android:id="@+id/action_onboardingChildFirstFragment_to_onboardingChildSecondFragment"
             app:destination="@id/onboardingChildSecondFragment" />
     </fragment>
 

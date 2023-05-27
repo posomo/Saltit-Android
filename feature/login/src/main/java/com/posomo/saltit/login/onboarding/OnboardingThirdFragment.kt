@@ -1,49 +1,44 @@
 package com.posomo.saltit.login.onboarding
 
-import android.content.Context
-import androidx.core.content.ContextCompat
+import androidx.fragment.app.activityViewModels
+import com.posomo.saltit.common_ui.R.color.white
 import com.posomo.saltit.common_ui.base.BaseFragment
 import com.posomo.saltit.common_ui.util.ActivityUtil
 import com.posomo.saltit.login.R
 import com.posomo.saltit.login.databinding.FragmentOnboardingThirdBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 
 @AndroidEntryPoint
 class OnboardingThirdFragment : BaseFragment<FragmentOnboardingThirdBinding>(R.layout.fragment_onboarding_third) {
 
+    private val viewModel by activityViewModels<OnboardingViewModel>()
+
     override fun initView() {
-        (activity as ActivityUtil).hideBottomNavigationView()
+        (activity as ActivityUtil).changeStatusBarColor(getColor(white))
 
-        (activity as ActivityUtil).changeStatusBarColor(
-            ContextCompat.getColor(
-                requireContext(),
-                com.posomo.saltit.common_ui.R.color.white
-            )
-        )
+        initUI()
+        subscribeUI()
+    }
 
-//        val userCurrentAvgLunchPrice = (activity as ActivityUtil).getUserCurrentAvgLunchPriceInLocal(0)
-//        val userIdealAvgLunchPrice = (activity as ActivityUtil).getUserIdealAvgLunchPriceInLocal(0)
-//        val userSavingLunchPrice = ((userCurrentAvgLunchPrice - userIdealAvgLunchPrice)*30).toString()
-
-//        if(userSavingLunchPrice.length == 5 ) {
-//            binding.onboarding3MonthlySavingMoney.text = userSavingLunchPrice.substring(0,2) + ",000"
-//        }
-//        else if(userSavingLunchPrice.length == 6) {
-//            binding.onboarding3MonthlySavingMoney.text = userSavingLunchPrice.substring(0,3) + ",000"
-//        }
-//        else {
-//            binding.onboarding3MonthlySavingMoney.text = "15,000"
-//        }
+    private fun initUI() {
+        var savingLunchPrice = (viewModel.currentAvgLunchPrice.value - viewModel.idealAvgLunchPrice.value) * 30
+        if (savingLunchPrice == 0) savingLunchPrice = 15
+        binding.onboarding3MonthlySavingMoney.text = getString(R.string.onboarding_price, savingLunchPrice)
 
         binding.onboardingThirdBtn.setOnClickListener {
-            (activity as ActivityUtil).navigateToHomeFragment()
-            onBoardingFinished()
+            viewModel.finishOnboarding()
         }
     }
 
-    private fun onBoardingFinished() {
-        val prefs = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        prefs.edit().putBoolean("finished", true).apply()
+    private fun subscribeUI() {
+        launchOnLifecycleStarted {
+            viewModel.storeOnboardingSuccessFlow.collectLatest { isSuccess ->
+                if (!isSuccess) return@collectLatest
+
+                (activity as ActivityUtil).navigateToHomeFragment()
+            }
+        }
     }
 
 }

@@ -6,10 +6,10 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.widget.SeekBar
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.posomo.saltit.common_ui.R.color.saltit_sub_orange_Text
+import com.posomo.saltit.common_ui.R.color.white
 import com.posomo.saltit.common_ui.base.BaseFragment
 import com.posomo.saltit.common_ui.util.ActivityUtil
 import com.posomo.saltit.login.R
@@ -24,12 +24,7 @@ class OnboardingFirstFragment : BaseFragment<FragmentOnboardingFirstBinding>(R.l
 
 	override fun initView() {
 
-		(activity as ActivityUtil).changeStatusBarColor(
-			ContextCompat.getColor(
-				requireContext(),
-				com.posomo.saltit.common_ui.R.color.white
-			)
-		)
+		(activity as ActivityUtil).changeStatusBarColor(getColor(white))
 
 		initUI()
 		subscribeUI()

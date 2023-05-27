@@ -4,12 +4,12 @@ import com.posomo.saltit.data.datastore.PosomoDataStore
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class StoreUserIdealAvgLunchPriceUseCase  @Inject constructor(
+class StoreOnboardingUseCase @Inject constructor(
 	private val posomoDataStore: PosomoDataStore,
 ) {
 
-	operator fun invoke(price: Int) = flow {
-		posomoDataStore.setUserIdealAvgLunchPrice(price).collect { isSuccess ->
+	operator fun invoke(finished: Boolean) = flow {
+		posomoDataStore.setOnboarding(finished).collect { isSuccess ->
 			emit(isSuccess)
 		}
 	}

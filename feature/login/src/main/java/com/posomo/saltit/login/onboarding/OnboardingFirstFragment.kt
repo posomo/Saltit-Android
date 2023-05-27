@@ -7,7 +7,7 @@ import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.widget.SeekBar
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.posomo.saltit.common_ui.R.color.saltit_sub_orange_Text
 import com.posomo.saltit.common_ui.base.BaseFragment
@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.collectLatest
 @AndroidEntryPoint
 class OnboardingFirstFragment : BaseFragment<FragmentOnboardingFirstBinding>(R.layout.fragment_onboarding_first) {
 
-	private val viewModel by viewModels<OnboardingFirstViewModel>()
+	private val viewModel by activityViewModels<OnboardingViewModel>()
 
 	override fun initView() {
 
@@ -53,7 +53,7 @@ class OnboardingFirstFragment : BaseFragment<FragmentOnboardingFirstBinding>(R.l
 
 		initOnboardingText()
 
-		binding.txtNext.setOnClickListener {
+		binding.onboardingFirstBtn.setOnClickListener {
 			val price = binding.onboardingUserLunchPriceSeekbar.progress * 1000
 			viewModel.storeCurrentAvgLunchPrice(price)
 		}
@@ -74,7 +74,7 @@ class OnboardingFirstFragment : BaseFragment<FragmentOnboardingFirstBinding>(R.l
 			viewModel.storeCurrentAvgLunchPriceSuccessFlow.collectLatest { isSuccess ->
 				if (!isSuccess) return@collectLatest
 
-				findNavController().navigate(R.id.action_onboardingChildFirstFragment_to_onboardingChildSecondFragment)
+				findNavController().navigate(R.id.action_onboardingFirstFragment_to_onboardingSecondFragment)
 			}
 		}
 	}

@@ -6,23 +6,23 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.posomo.saltit.login.LoginFragment"
+        android:id="@+id/onboardingThirdFragment"
+        android:name="com.posomo.saltit.login.onboarding.OnboardingThirdFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_onboarding_child_third" />
+        tools:layout="@layout/fragment_onboarding_third" />
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.posomo.saltit.login.SplashFragment"
         android:label="SplashFragment">
         <action
-            android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_splashFragment_to_onboardingThirdFragment"
+            app:destination="@id/onboardingThirdFragment"
+            app:popUpToInclusive="true" />
 
         <action
-            android:id="@+id/action_splashFragment_to_onboardingChildFirstFragment"
-            app:destination="@id/onboardingChildFirstFragment"
+            android:id="@+id/action_splashFragment_to_onboardingFirstFragment"
+            app:destination="@id/onboardingFirstFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popUpToInclusive="true" />
@@ -30,20 +30,20 @@
     </fragment>
 
     <fragment
-        android:id="@+id/onboardingChildFirstFragment"
+        android:id="@+id/onboardingFirstFragment"
         android:name="com.posomo.saltit.login.onboarding.OnboardingFirstFragment"
-        android:label="OnboardingChildFirstFragment">
+        android:label="OnboardingFirstFragment">
         <action
-            android:id="@+id/action_onboardingChildFirstFragment_to_onboardingChildSecondFragment"
-            app:destination="@id/onboardingChildSecondFragment" />
+            android:id="@+id/action_onboardingFirstFragment_to_onboardingSecondFragment"
+            app:destination="@id/onboardingSecondFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/onboardingChildSecondFragment"
-        android:name="com.posomo.saltit.login.onboarding.OnboardingChildSecondFragment"
-        android:label="OnboardingChildSecondFragment">
+        android:id="@+id/onboardingSecondFragment"
+        android:name="com.posomo.saltit.login.onboarding.OnboardingSecondFragment"
+        android:label="OnboardingSecondFragment">
         <action
-            android:id="@+id/action_onboardingChildSecondFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_onboardingSecondFragment_to_onboardingThirdFragment"
+            app:destination="@id/onboardingThirdFragment" />
     </fragment>
 </navigation>

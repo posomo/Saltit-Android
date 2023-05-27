@@ -31,7 +31,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(R.layout.fragment_spl
 //			if (isOnBoardingFinished()) {
 //				(activity as ActivityUtil).navigateToHomeFragment()
 //			} else {
-				findNavController().navigate(R.id.action_splashFragment_to_onboardingChildFirstFragment)
+				findNavController().navigate(R.id.action_splashFragment_to_onboardingFirstFragment)
 //			}
 		}
 	}

@@ -12,9 +12,9 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-class PosomoDataStoreImpl @Inject constructor(
+class SaltitDataStoreImpl @Inject constructor(
 	private val dataStore: DataStore<Preferences>,
-) : PosomoDataStore {
+) : SaltitDataStore {
 
 	private val userCurrentAvgLunchPriceFlow =
 		dataStore.data.map { pref ->
@@ -47,15 +47,17 @@ class PosomoDataStoreImpl @Inject constructor(
 	}.catch { emit(false) }
 
 
-	private val userOnboardingFlow =
+	private val userOnboardingFinishStatusFlow =
 		dataStore.data.map { pref ->
-			pref[booleanPreferencesKey(USER_ONBOARDING)] ?: true
+			pref[booleanPreferencesKey(USER_ONBOARDING_FINISH_STATUS)] ?: false
 		}
-	override suspend fun setOnboarding(finished: Boolean) = flow {
+	override suspend fun setOnboardingFinishStatus(finished: Boolean) = flow {
 		dataStore.edit { pref ->
-			pref[booleanPreferencesKey(USER_ONBOARDING)] = finished
+			pref[booleanPreferencesKey(USER_ONBOARDING_FINISH_STATUS)] = finished
 			emit(true)
 		}
 	}.catch { emit(false) }
+
+	override suspend fun getOnboardingFinsihStatus() = userOnboardingFinishStatusFlow.first()
 
 }

@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
-import com.posomo.saltit.data.datastore.PosomoDataStore
-import com.posomo.saltit.data.datastore.PosomoDataStoreImpl
+import com.posomo.saltit.data.datastore.SaltitDataStore
+import com.posomo.saltit.data.datastore.SaltitDataStoreImpl
 import com.posomo.saltit.data.datastore.USER_LUNCH_PRICE_DATASTORE
 import dagger.Module
 import dagger.Provides
@@ -24,7 +24,7 @@ object DataStoreModule {
 
 	@Singleton
 	@Provides
-	fun providePriceDataStore(@ApplicationContext context: Context): PosomoDataStore {
-		return PosomoDataStoreImpl(context.dataStore)
+	fun providePriceDataStore(@ApplicationContext context: Context): SaltitDataStore {
+		return SaltitDataStoreImpl(context.dataStore)
 	}
 }

@@ -2,7 +2,7 @@ package com.posomo.saltit.data.datastore
 
 import kotlinx.coroutines.flow.Flow
 
-interface PosomoDataStore {
+interface SaltitDataStore {
 
 	suspend fun getUserCurrentAvgLunchPrice(): Int
 
@@ -12,5 +12,7 @@ interface PosomoDataStore {
 
 	suspend fun setUserIdealAvgLunchPrice(price: Int): Flow<Boolean>
 
-	suspend fun setOnboarding(finished: Boolean): Flow<Boolean>
+	suspend fun setOnboardingFinishStatus(finished: Boolean): Flow<Boolean>
+
+	suspend fun getOnboardingFinsihStatus(): Boolean
 }

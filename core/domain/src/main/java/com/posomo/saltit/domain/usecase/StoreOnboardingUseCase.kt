@@ -1,15 +1,15 @@
 package com.posomo.saltit.domain.usecase
 
-import com.posomo.saltit.data.datastore.PosomoDataStore
+import com.posomo.saltit.data.datastore.SaltitDataStore
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class StoreOnboardingUseCase @Inject constructor(
-	private val posomoDataStore: PosomoDataStore,
+	private val saltitDataStore: SaltitDataStore,
 ) {
 
 	operator fun invoke(finished: Boolean) = flow {
-		posomoDataStore.setOnboarding(finished).collect { isSuccess ->
+		saltitDataStore.setOnboardingFinishStatus(finished).collect { isSuccess ->
 			emit(isSuccess)
 		}
 	}

@@ -22,4 +22,7 @@ interface SaltitRepository {
         onComplete: () -> Unit,
         onError: (String?) -> Unit
     ) : Flow<RestaurantDetail>
+
+    @WorkerThread
+    fun getOnboardingFinishStatus(): Flow<Boolean>
 }

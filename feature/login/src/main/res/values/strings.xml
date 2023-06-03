@@ -3,8 +3,21 @@
     <string name="splash_text">짭짤한 점심 추천 앱</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="onboarding_question_text_head">하루 점심값으로</string>
-    <string name="onboarding_user_lunch_price">10,000</string>
+    <string name="onboarding_user_lunch_price">10,000원</string>
     <string name="onboarding2_question_text_head">이상적인 점심값은</string>
     <string name="onboarding2_user_lunch_price">8,000</string>
     <string name="onboarding3_monthly_saving_money">80,000</string>
+
+    <string name="onboarding_price">%d,000원</string>
+    <string name="onboarding_first_head_text">하루 점심값으로</string>
+    <string name="onboarding_first_subhead_text">얼마 정도 쓰고 계신가요?</string>
+    <string name="onboarding_first_seekbar_explain_text">원을 움직여 보세요</string>
+    <string name="onboarding_first_btn_text">다음</string>
+    <string name="onboarding_second_head_text">이상적인 점심값은</string>
+    <string name="onboarding_second_subhead_text">얼마라고 생각하세요?</string>
+    <string name="onboarding_second_seekbar_explain_text">원을 움직여 보세요</string>
+    <string name="onboarding_second_btn_text">다음</string>
+    <string name="onboarding_third_head_text">솔팃과 함께</string>
+    <string name="onboarding_third_head_text2">한달 점심값에서</string>
+    <string name="onboarding_third_subhead_text">모아보세요!</string>
 </resources>

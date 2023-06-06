@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Salitit</string>
+    <string name="app_name">Saltit</string>
     <string name="menu_home">홈</string>
     <string name="menu_location">주변</string>
     <string name="menu_saving">가계부</string>
